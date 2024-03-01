@@ -1,3 +1,6 @@
+From the `adwaita-1-demo`, `clamp` setting the unit to `px` seems to fix the cramped bug at scale 2
+
+
 <div align="center">
 <img src="https://raw.githubusercontent.com/flxzt/rnote/main/crates/rnote-ui/data/icons/scalable/apps/rnote.svg" width="300"></img>
 </div><br><br><br>
