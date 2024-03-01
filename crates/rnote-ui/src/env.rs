@@ -63,6 +63,9 @@ pub(crate) fn locale_dir() -> anyhow::Result<PathBuf> {
 
 /// depending on the target platform we need to set some env vars on startup
 pub(crate) fn setup_env() -> anyhow::Result<()> {
+    std::env::set_var("GDK_SCALE", "2"); //test if this is possible to do
+                                         // for now, this is done in all cases
+
     if cfg!(target_os = "windows") {
         let data_dir = data_dir()?;
         let lib_dir = lib_dir()?;
@@ -72,7 +75,7 @@ pub(crate) fn setup_env() -> anyhow::Result<()> {
             "GDK_PIXBUF_MODULEDIR",
             lib_dir.join("gdk-pixbuf-2.0\\2.10.0\\loaders"),
         );
-        //std::env::set_var("RUST_LOG", "rnote=debug");
+    //std::env::set_var("RUST_LOG", "rnote=debug");
     } else if cfg!(target_os = "macos") {
         let canonicalized_exec_dir = exec_parent_dir()?.canonicalize()?;
 
