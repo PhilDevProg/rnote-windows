@@ -27,6 +27,8 @@
             <property name="margin-end">24</property>
             <property name="maximum-size">800</property>
             <property name="tightening-threshold">600</property>
+            <property name="sidebar-width-unit">0</property>
+<!--need the thing in pixel as well here-->
             <property name="hexpand">false</property>
             <property name="vexpand">true</property>
             <property name="valign">fill</property>

@@ -14,8 +14,14 @@
     <property name="content">
       <object class="AdwOverlaySplitView" id="split_view">
         <property name="pin-sidebar">true</property>
-        <property name="min-sidebar-width">500</property>
-        <property name="max-sidebar-width">550</property>
+        <property name="sidebar-width-unit">0</property>
+<!--        0 for px -->
+<!--        need to see if this can be set like the clamp demo for interactivity from the code side-->
+<!--        this will need to be propagated down to the export page -->
+<!--        need to check all pages of the app-->
+        <property name="min-sidebar-width">0</property>
+        <property name="max-sidebar-width">1000</property>
+        <!-- still too small ? -->
         <property name="sidebar-width-fraction">0.3</property>
         <!-- sidebar -->
         <property name="sidebar">
