@@ -70,9 +70,22 @@ pub(crate) fn setup_env() -> anyhow::Result<()> {
         let data_dir = data_dir()?;
         let lib_dir = lib_dir()?;
 
-        std::env::set_var("XDG_DATA_DIRS", data_dir);
         // does the XDG_DATA_DIRS not also export the gsetting location ?
-        tracing::debug!("{:?}", data_dir);
+        tracing::debug!("{:?}", data_dir.clone());
+
+        std::env::set_var("XDG_DATA_DIRS", data_dir);
+        // C:\\msys64\\mingw64\\bin\\..\\share
+        // then go into glib-2.0/schemas/c:\msys64\mingw64\share\glib-2.0\schemas\com.github.flxzt.rnote.gschema.xml
+        // open the file here, get to the part that we would add to it and parse it here
+        // now the hard part is verifying this would still work after packaging rnote to a .exe ...
+
+        // for the exe
+        // C:\Program Files\Rnote\share\glib-2.0\schemas
+        // so if the XDG_DATA_DIRS ends up being correct, this is okay
+
+        // maybe, after changing the unit for the adaptation, we could also set the bar on the side to be of variable width
+        // in the settings to compensate as well
+
         std::env::set_var(
             "GDK_PIXBUF_MODULEDIR",
             lib_dir.join("gdk-pixbuf-2.0\\2.10.0\\loaders"),

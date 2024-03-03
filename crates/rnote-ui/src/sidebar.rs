@@ -103,13 +103,16 @@ impl RnSidebar {
         imp.workspacebrowser.get().init(appwindow);
         imp.settings_panel.get().init(appwindow);
 
+        //seens interesting here
         imp.left_close_button
             .connect_clicked(clone!(@weak appwindow => move |_| {
+                tracing::debug!("close the sidebar");
                 appwindow.split_view().set_show_sidebar(false);
             }));
         imp.right_close_button
             .connect_clicked(clone!(@weak appwindow => move |_| {
                 appwindow.split_view().set_show_sidebar(false);
+                tracing::debug!("close the sidebar")
             }));
     }
 }

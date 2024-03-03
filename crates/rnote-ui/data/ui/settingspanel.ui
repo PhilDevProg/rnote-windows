@@ -25,11 +25,19 @@
             <property name="margin-bottom">24</property>
             <property name="margin-start">24</property>
             <property name="margin-end">24</property>
-            <property name="maximum-size">800</property>
-            <property name="tightening-threshold">600</property>
-            <property name="sidebar-width-unit">0</property>
-<!--need the thing in pixel as well here-->
-            <property name="hexpand">false</property>
+            <!-- set to px -->
+            <property name="maximum-size">1600px</property>
+          <!-- with a very large maximum size -->
+            <property name="tightening-threshold">600px</property>
+<!--            <property name="unit">0</property>-->
+<!--            not correct here ...-->
+<!--            (rnote.exe:19708): Gtk-CRITICAL **: 23:58:46.826: Error building template class 'RnSettingsPanel' for an instance of type 'RnSettingsPanel': .:0:0 Invalid property: AdwClamp.sidebar-width-unit-->
+<!--            thread 'main' panicked at C:/Users/mpeel/Documents/GitHub/autosave/_mesonbuild/cargo-home\registry\src\index.crates.io-6f17d22bba15001f\gtk4-0.8.0\src\subclass\widget.rs:1254:17:-->
+<!--            Failed to retrieve template child. Please check that all fields of type `GtkScrolledWindow` have been bound and have a #[template_child] attribute.-->
+<!--            note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace-->
+            <!--need the thing in pixel as well here-->
+            <property name="hexpand">true</property>
+            <!-- to set it as well to take the full space compared to the other settings panel ? -->
             <property name="vexpand">true</property>
             <property name="valign">fill</property>
             <property name="halign">fill</property>

@@ -15,6 +15,7 @@ use rnote_engine::{Camera, Engine};
 use std::path::PathBuf;
 use std::str::FromStr;
 use std::time::Instant;
+use adw;
 
 const CLIPBOARD_INPUT_STREAM_BUFSIZE: usize = 4096;
 
@@ -172,6 +173,10 @@ impl RnAppWindow {
         action_open_settings.connect_activate(clone!(@weak self as appwindow => move |_, _| {
             appwindow.sidebar().sidebar_stack().set_visible_child_name("settings_page");
             appwindow.split_view().set_show_sidebar(true);
+            tracing::debug!("open settings");
+            // see if the default width fraction can be set here
+            appwindow.split_view().set_sidebar_width_fraction(0.5f64);
+            appwindow.split_view().set_sidebar_width_unit(adw::LengthUnit::Px);
         }));
 
         // About Dialog
