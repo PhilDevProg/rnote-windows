@@ -83,6 +83,7 @@ unicode-segmentation = "1.11"
 url = "2.5"
 usvg = "0.40.0"
 winresource = "0.1.17"
+winreg = "0.52.0"
 xmlwriter = "0.1.0"
 # Enabling feature > v20_9 causes linker errors on mingw
 poppler-rs = { version = "0.23.0", features = ["v20_9"] }

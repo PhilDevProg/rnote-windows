@@ -84,6 +84,17 @@ impl RnAppWindow {
         self.set_property("focus-mode", focus_mode.to_value());
     }
 
+    #[allow(unused)]
+    pub(crate) fn gtk_scale(&self) -> bool {
+        self.imp()
+            .sidebar
+            .clone()
+            .downcast::<RnSidebar>()
+            .unwrap()
+            .settings_panel()
+            .get_gdk_scale() // very bad name for now
+    }
+
     pub(crate) fn app(&self) -> RnApp {
         self.application().unwrap().downcast::<RnApp>().unwrap()
     }

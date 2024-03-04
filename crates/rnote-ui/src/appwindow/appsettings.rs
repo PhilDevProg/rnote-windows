@@ -1,6 +1,6 @@
 // Imports
 use crate::appwindow::RnAppWindow;
-use adw::{prelude::*, subclass::prelude::*};
+use adw::{prelude::*, subclass::prelude::*, LengthUnit};
 use gtk4::{gdk, glib, glib::clone};
 
 impl RnAppWindow {
@@ -83,6 +83,17 @@ impl RnAppWindow {
                     .sidebar()
                     .settings_panel()
                     .general_inertial_scrolling_row(),
+                "active",
+            )
+            .get_no_changes()
+            .build();
+
+        // gdk scale : needs to set some things to pixel instead of sp ...
+
+        app_settings
+            .bind(
+                "gdk-scale",
+                &self.sidebar().settings_panel().init_gdkscale(),
                 "active",
             )
             .get_no_changes()
@@ -426,6 +437,21 @@ impl RnAppWindow {
                 .workspacebrowser()
                 .workspacesbar()
                 .load_from_settings(&app_settings);
+        }
+
+        {
+            // gdk_scale settings
+            // to do a conditional compile on ...
+            let gdk_workaround = app_settings.boolean("gdk-scale");
+
+            // set to pixel
+            if gdk_workaround {
+                self.split_view().set_sidebar_width_unit(LengthUnit::Px);
+                self.sidebar()
+                    .settings_panel()
+                    .get_clamp()
+                    .set_unit(LengthUnit::Px);
+            }
         }
 
         Ok(())

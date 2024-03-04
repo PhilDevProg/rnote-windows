@@ -2,6 +2,8 @@
 use crate::config;
 use std::ffi::OsStr;
 use std::path::{Component, Path, PathBuf};
+use winreg::enums::HKEY_CURRENT_USER;
+use winreg::RegKey;
 
 pub(crate) fn lib_dir() -> anyhow::Result<PathBuf> {
     if cfg!(target_os = "windows") {
@@ -63,34 +65,30 @@ pub(crate) fn locale_dir() -> anyhow::Result<PathBuf> {
 
 /// depending on the target platform we need to set some env vars on startup
 pub(crate) fn setup_env() -> anyhow::Result<()> {
-    std::env::set_var("GDK_SCALE", "2"); //test if this is possible to do
-                                         // for now, this is done in all cases
-
     if cfg!(target_os = "windows") {
         let data_dir = data_dir()?;
         let lib_dir = lib_dir()?;
 
-        // does the XDG_DATA_DIRS not also export the gsetting location ?
-        tracing::debug!("{:?}", data_dir.clone());
+        std::env::set_var("XDG_DATA_DIRS", data_dir.clone());
 
-        std::env::set_var("XDG_DATA_DIRS", data_dir);
-        // C:\\msys64\\mingw64\\bin\\..\\share
-        // then go into glib-2.0/schemas/c:\msys64\mingw64\share\glib-2.0\schemas\com.github.flxzt.rnote.gschema.xml
-        // open the file here, get to the part that we would add to it and parse it here
-        // now the hard part is verifying this would still work after packaging rnote to a .exe ...
+        // actually this is done in the regedit instead
+        let key = RegKey::predef(HKEY_CURRENT_USER);
+        let app_seting_key = key.open_subkey("software\\GSettings\\com\\github\\flxzt\\rnote");
 
-        // for the exe
-        // C:\Program Files\Rnote\share\glib-2.0\schemas
-        // so if the XDG_DATA_DIRS ends up being correct, this is okay
+        let gdk_workaround = match app_seting_key {
+            Err(_) => false,
+            Ok(key) => key.get_value("gdk-scale").unwrap_or(0u32) == 1,
+        };
 
-        // maybe, after changing the unit for the adaptation, we could also set the bar on the side to be of variable width
-        // in the settings to compensate as well
+        tracing::debug!("{:?}", gdk_workaround);
+        if gdk_workaround {
+            std::env::set_var("GDK_SCALE", "2");
+        }
 
         std::env::set_var(
             "GDK_PIXBUF_MODULEDIR",
             lib_dir.join("gdk-pixbuf-2.0\\2.10.0\\loaders"),
         );
-    //std::env::set_var("RUST_LOG", "rnote=debug");
     } else if cfg!(target_os = "macos") {
         let canonicalized_exec_dir = exec_parent_dir()?.canonicalize()?;
 

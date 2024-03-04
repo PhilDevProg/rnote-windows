@@ -24,11 +24,11 @@
       <action-widget response="apply" default="true">export_doc_button_confirm</action-widget>
     </action-widgets>
     <child>
-      <object class="AdwClamp">
+      <object class="AdwClamp" id="clamp">
         <property name="maximum-size">1000</property>
         <property name="tightening-threshold">900</property>
 <!--        need to use px here and set it from the code as well-->
-        <property name="unit">0</property>
+<!--        <property name="unit">0</property>-->
 <!--        only change for GDK_SCALE=2-->
         <property name="hexpand">true</property>
         <property name="vexpand">false</property>

@@ -34,6 +34,8 @@ mod imp {
         #[template_child]
         pub(crate) settings_scroller: TemplateChild<ScrolledWindow>,
         #[template_child]
+        pub(crate) clamp: TemplateChild<adw::Clamp>,
+        #[template_child]
         pub(crate) general_autosave_row: TemplateChild<adw::SwitchRow>,
         #[template_child]
         pub(crate) general_autosave_interval_secs_row: TemplateChild<adw::SpinRow>,
@@ -111,6 +113,8 @@ mod imp {
         pub(crate) penshortcut_drawing_pad_button_2: TemplateChild<RnPenShortcutRow>,
         #[template_child]
         pub(crate) penshortcut_drawing_pad_button_3: TemplateChild<RnPenShortcutRow>,
+        #[template_child]
+        pub(crate) init_gdkscale: TemplateChild<adw::SwitchRow>,
     }
 
     #[glib::object_subclass]
@@ -322,6 +326,10 @@ impl RnSettingsPanel {
         self.imp().settings_scroller.clone()
     }
 
+    pub(crate) fn get_clamp(&self) -> adw::Clamp {
+        self.imp().clamp.clone()
+    }
+
     pub(crate) fn general_regular_cursor_picker(&self) -> RnIconPicker {
         self.imp().general_regular_cursor_picker.clone()
     }
@@ -340,6 +348,16 @@ impl RnSettingsPanel {
 
     pub(crate) fn general_inertial_scrolling_row(&self) -> adw::SwitchRow {
         self.imp().general_inertial_scrolling_row.clone()
+    }
+
+    // for the gdk
+    pub(crate) fn init_gdkscale(&self) -> adw::SwitchRow {
+        self.imp().init_gdkscale.clone()
+    }
+
+    // get the value
+    pub(crate) fn get_gdk_scale(&self) -> bool {
+        self.imp().init_gdkscale.get().is_active()
     }
 
     pub(crate) fn document_layout(&self) -> Layout {
@@ -547,6 +565,20 @@ impl RnSettingsPanel {
         imp.general_inertial_scrolling_row.connect_active_notify(
             clone!(@weak self as settingspanel, @weak appwindow => move |row| {
                 if !row.is_active() {
+                    appwindow.overlays().dispatch_toast_text_singleton(
+                        &gettext("Application restart is required"),
+                        0,
+                        &mut settingspanel.imp().app_restart_toast_singleton.borrow_mut()
+                    );
+                }
+            }),
+        );
+
+        // like the general_inertial_scolling row
+        imp.init_gdkscale.connect_active_notify(
+            clone!(@weak self as settingspanel, @weak appwindow => move |row| {
+                if row.is_active() { //double check but should allow it to only show when active
+                    // see why this is triggered on startup as well weirdly
                     appwindow.overlays().dispatch_toast_text_singleton(
                         &gettext("Application restart is required"),
                         0,

@@ -20,7 +20,7 @@
         <property name="propagate-natural-height">false</property>
         <property name="window-placement">top-left</property>
         <child>
-          <object class="AdwClamp">
+          <object class="AdwClamp" id="clamp">
             <property name="margin-top">32</property>
             <property name="margin-bottom">24</property>
             <property name="margin-start">24</property>
@@ -28,7 +28,7 @@
             <property name="maximum-size">800</property>
             <property name="tightening-threshold">600</property>
             <!-- change the unit to pixels here -->
-            <property name="unit">0</property>
+<!--            <property name="unit">0</property>-->
             <!-- to set it as well to take the full space compared to the other settings panel ? -->
             <property name="hexpand">false</property>
             <property name="vexpand">true</property>
@@ -513,6 +513,22 @@ on a drawing pad</property>
                         </child>
                       </object>
                     </child>
+                  </object>
+                </child>
+                <!-- Interface Group -->
+                <child>
+                  <object class="AdwPreferencesGroup">
+                    <property name="title" translatable="yes">Interface</property>
+                    <!--                  need to set a true/false for the windows GDK_SCALE thing-->
+                    <child>
+                      <object class="AdwSwitchRow" id="init_gdkscale">
+                        <property name="title" translatable="yes">Set GDK_SCALE to 2 </property>
+                        <property name="subtitle" translatable="yes">
+                          Force the GDK_SCALE to 2 (Windows only). Requires a restart
+                        </property>
+                      </object>
+                    </child>
+                    <!--                    need to set a settings for the fractional width-->
                   </object>
                 </child>
               </object>
