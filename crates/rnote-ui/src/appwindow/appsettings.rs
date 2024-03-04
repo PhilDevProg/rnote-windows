@@ -44,6 +44,12 @@ impl RnAppWindow {
             .get_no_changes()
             .build();
 
+        // sidebar fractional widt
+        app_settings
+            .bind("fractional-width", self, "fractional-width")
+            .get_no_changes()
+            .build();
+
         // righthanded
         app_settings
             .bind("righthanded", self, "righthanded")

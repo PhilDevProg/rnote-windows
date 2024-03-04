@@ -23,6 +23,7 @@ pub(crate) struct RnAppWindow {
     pub(crate) block_pinch_zoom: Cell<bool>,
     pub(crate) touch_drawing: Cell<bool>,
     pub(crate) focus_mode: Cell<bool>,
+    pub(crate) fractional_width: Cell<u32>,
 
     #[template_child]
     pub(crate) main_header: TemplateChild<RnMainHeader>,
@@ -49,6 +50,7 @@ impl Default for RnAppWindow {
             block_pinch_zoom: Cell::new(false),
             touch_drawing: Cell::new(false),
             focus_mode: Cell::new(false),
+            fractional_width: Cell::new(30),
 
             main_header: TemplateChild::<RnMainHeader>::default(),
             split_view: TemplateChild::<adw::OverlaySplitView>::default(),
@@ -130,6 +132,11 @@ impl ObjectImpl for RnAppWindow {
                 glib::ParamSpecBoolean::builder("focus-mode")
                     .default_value(false)
                     .build(),
+                glib::ParamSpecUInt::builder("fractional-width")
+                    .minimum(20)
+                    .maximum(50)
+                    .default_value(30)
+                    .build(),
             ]
         });
         PROPERTIES.as_ref()
@@ -143,6 +150,7 @@ impl ObjectImpl for RnAppWindow {
             "block-pinch-zoom" => self.block_pinch_zoom.get().to_value(),
             "touch-drawing" => self.touch_drawing.get().to_value(),
             "focus-mode" => self.focus_mode.get().to_value(),
+            "fractional-width" => self.fractional_width.get().to_value(),
             _ => unimplemented!(),
         }
     }
@@ -173,6 +181,13 @@ impl ObjectImpl for RnAppWindow {
                 if self.autosave.get() {
                     self.update_autosave_handler();
                 }
+            }
+            "fractional-width" => {
+                let frac_width = value
+                    .get::<u32>()
+                    .expect("The value needs to be of type `u32`");
+
+                self.fractional_width.replace(frac_width);
             }
             "righthanded" => {
                 let righthanded = value

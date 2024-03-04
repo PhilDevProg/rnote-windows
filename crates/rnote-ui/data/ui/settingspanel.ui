@@ -534,10 +534,7 @@ on a drawing pad</property>
                         <property name="title" translatable="yes">Fractional width</property>
                         <property name="subtitle" translatable="yes">Set the fractional width of the sidebar in % Defaults to 30.</property>
                         <property name="adjustment">format_fractional_width_adj</property>
-                        <property name="lower">20</property>
-                        <property name="upper">60</property>
-                        <property name="page-increment">10</property>
-                        <property name="step-increment">1</property>
+                        <property name="digits">0</property>
                       </object>
                     </child>
                   </object>
@@ -573,6 +570,12 @@ on a drawing pad</property>
       <property name="upper">9999</property>
       <property name="lower">5</property>
       <property name="value">120</property>
+    </object>
+    <object class="GtkAdjustment" id="format_fractional_width_adj">
+      <property name="step-increment">1</property>
+      <property name="upper">50</property>
+      <property name="lower">20</property>
+      <property name="value">30</property>
     </object>
   </template>
 </interface>

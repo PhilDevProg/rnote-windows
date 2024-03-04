@@ -53,7 +53,6 @@ tracing = { workspace = true }
 tracing-subscriber = { workspace = true }
 unicode-segmentation = { workspace = true }
 url = { workspace = true }
-winreg = { workspace = true}
 
 [build-dependencies]
 anyhow = { workspace = true }
@@ -61,3 +60,4 @@ glib-build-tools = { workspace = true }
 
 [target.'cfg(windows)'.build-dependencies]
 winresource = { workspace = true }
+winreg = { workspace = true }

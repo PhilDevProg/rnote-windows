@@ -169,9 +169,8 @@
       <default>''</default>
       <summary>the engine configuration</summary>
     </key>
-    <key name="fractional-width" type="d">
-      <range min="0.1" max="0.6">
-      <default>0.3</default>
+    <key name="fractional-width" type="u">
+      <default>30</default>
       <summary>the sidebar width</summary>
     </key>
   </schema>

@@ -2,7 +2,9 @@
 use crate::config;
 use std::ffi::OsStr;
 use std::path::{Component, Path, PathBuf};
+#[cfg(target_os = "windows")]
 use winreg::enums::HKEY_CURRENT_USER;
+#[cfg(target_os = "windows")]
 use winreg::RegKey;
 
 pub(crate) fn lib_dir() -> anyhow::Result<PathBuf> {
@@ -71,18 +73,20 @@ pub(crate) fn setup_env() -> anyhow::Result<()> {
 
         std::env::set_var("XDG_DATA_DIRS", data_dir.clone());
 
-        // actually this is done in the regedit instead
-        let key = RegKey::predef(HKEY_CURRENT_USER);
-        let app_seting_key = key.open_subkey("software\\GSettings\\com\\github\\flxzt\\rnote");
+        #[cfg(target_os = "windows")]
+        {
+            let key = RegKey::predef(HKEY_CURRENT_USER);
+            let app_seting_key = key.open_subkey("software\\GSettings\\com\\github\\flxzt\\rnote");
 
-        let gdk_workaround = match app_seting_key {
-            Err(_) => false,
-            Ok(key) => key.get_value("gdk-scale").unwrap_or(0u32) == 1,
-        };
+            let gdk_workaround = match app_seting_key {
+                Err(_) => false,
+                Ok(key) => key.get_value("gdk-scale").unwrap_or(0u32) == 1,
+            };
 
-        tracing::debug!("{:?}", gdk_workaround);
-        if gdk_workaround {
-            std::env::set_var("GDK_SCALE", "2");
+            tracing::debug!("{:?}", gdk_workaround);
+            if gdk_workaround {
+                std::env::set_var("GDK_SCALE", "2");
+            }
         }
 
         std::env::set_var(

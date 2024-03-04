@@ -506,22 +506,21 @@ impl RnSettingsPanel {
             .bidirectional()
             .build();
 
-        // for now close to the thing we want to copy, to move after
-        imp.format_dpi_adj
-            .connect_value_changed(clone!(@weak appwindow => move |adj| {
-                let percentage = adj.value();
-                appwindow.split_view().set_sidebar_width_fraction(percentage as f64 / 100.0f64);
-            }));
-
-        //correct here ?
-        imp.format_dpi_adj
+        imp.fractional_width
             .get()
             .bind_property("value", appwindow, "fractional-width")
-            .transform_to(|_, val: f64| Some(val)) // good type here ?
-            .transform_from(|_, val: f64| Some(val)) //good type here ?
             .sync_create()
             .bidirectional()
             .build();
+
+        // for now close to the thing we want to copy, to move after
+        imp.format_fractional_width_adj.connect_value_changed(
+            clone!(@weak appwindow => move |adj| {
+                let percentage = adj.value();
+                tracing::debug!("setting the sidebar to {:?}", percentage);
+                appwindow.split_view().set_sidebar_width_fraction(percentage as f64 / 100.0f64);
+            }),
+        );
 
         let set_overlays_margins = |appwindow: &RnAppWindow, row_active: bool| {
             let (m1, m2) = if row_active { (18, 72) } else { (9, 63) };
