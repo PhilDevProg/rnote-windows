@@ -14,23 +14,10 @@
     <property name="content">
       <object class="AdwOverlaySplitView" id="split_view">
         <property name="pin-sidebar">true</property>
-<!--        0 for px -->
-<!--        need to see if this can be set like the clamp demo for interactivity from the code side-->
-<!--        this will need to be propagated down to the export page -->
-<!--        need to check all pages of the app-->
-<!--        technically a function for it exists as well-->
-<!--        https://world.pages.gitlab.gnome.org/Rust/libadwaita-rs/stable/latest/docs/libadwaita/struct.OverlaySplitView.html#min-sidebar-width-->
-<!--        source pub fn set_sidebar_width_fraction(&self, fraction: f64)-->
-<!--        should be possible to do-->
 <!--        + pub fn set_sidebar_width_unit(&self, unit: LengthUnit)-->
-<!--        this part may be triggered at the SETTINGS loading stage after the app is launched-->
-<!--        also allows for resizable bar on the left if needed-->
-        <property name="min-sidebar-width">0px</property>
-        <property name="max-sidebar-width">2000px</property>
-        <!-- still too small ? -->
-        <!--        force to PX here -->
-<!--        now is the error the sidebar width fraction being incorrect ?-->
-        <property name="sidebar-width-fraction">0.4</property>
+        <property name="min-sidebar-width">500</property>
+        <property name="max-sidebar-width">550</property>
+        <property name="sidebar-width-fraction">0.3</property>
         <!-- sidebar -->
         <property name="sidebar">
           <object class="RnSidebar" id="sidebar">

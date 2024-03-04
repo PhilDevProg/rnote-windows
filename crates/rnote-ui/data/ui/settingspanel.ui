@@ -30,7 +30,7 @@
             <!-- change the unit to pixels here -->
             <property name="unit">0</property>
             <!-- to set it as well to take the full space compared to the other settings panel ? -->
-            <property name="hexpand">true</property>
+            <property name="hexpand">false</property>
             <property name="vexpand">true</property>
             <property name="valign">fill</property>
             <property name="halign">fill</property>
