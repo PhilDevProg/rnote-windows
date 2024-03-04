@@ -2,6 +2,7 @@
 use crate::config;
 use std::ffi::OsStr;
 use std::path::{Component, Path, PathBuf};
+#[cfg(target_os = "windows")]
 use winreg;
 
 pub(crate) fn lib_dir() -> anyhow::Result<PathBuf> {
