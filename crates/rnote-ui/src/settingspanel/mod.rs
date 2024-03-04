@@ -115,6 +115,10 @@ mod imp {
         pub(crate) penshortcut_drawing_pad_button_3: TemplateChild<RnPenShortcutRow>,
         #[template_child]
         pub(crate) init_gdkscale: TemplateChild<adw::SwitchRow>,
+        #[template_child]
+        pub(crate) fractional_width: TemplateChild<adw::SpinRow>,
+        #[template_child]
+        pub(crate) format_fractional_width_adj: TemplateChild<Adjustment>,
     }
 
     #[glib::object_subclass]
@@ -502,6 +506,23 @@ impl RnSettingsPanel {
             .bidirectional()
             .build();
 
+        // for now close to the thing we want to copy, to move after
+        imp.format_dpi_adj
+            .connect_value_changed(clone!(@weak appwindow => move |adj| {
+                let percentage = adj.value();
+                appwindow.split_view().set_sidebar_width_fraction(percentage as f64 / 100.0f64);
+            }));
+
+        //correct here ?
+        imp.format_dpi_adj
+            .get()
+            .bind_property("value", appwindow, "fractional-width")
+            .transform_to(|_, val: f64| Some(val)) // good type here ?
+            .transform_from(|_, val: f64| Some(val)) //good type here ?
+            .sync_create()
+            .bidirectional()
+            .build();
+
         let set_overlays_margins = |appwindow: &RnAppWindow, row_active: bool| {
             let (m1, m2) = if row_active { (18, 72) } else { (9, 63) };
             appwindow.overlays().colorpicker().set_margin_top(m1);
@@ -576,9 +597,10 @@ impl RnSettingsPanel {
 
         // like the general_inertial_scolling row
         imp.init_gdkscale.connect_active_notify(
-            clone!(@weak self as settingspanel, @weak appwindow => move |row| {
-                if row.is_active() { //double check but should allow it to only show when active
-                    // see why this is triggered on startup as well weirdly
+            clone!(@weak self as settingspanel, @weak appwindow => move |_row| {
+                // only if the settings panel is open
+                if !appwindow.split_view().is_collapsed()
+                {
                     appwindow.overlays().dispatch_toast_text_singleton(
                         &gettext("Application restart is required"),
                         0,

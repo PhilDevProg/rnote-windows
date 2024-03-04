@@ -529,6 +529,17 @@ on a drawing pad</property>
                       </object>
                     </child>
                     <!--                    need to set a settings for the fractional width-->
+                    <child>
+                      <object class="AdwSpinRow" id="fractional_width">
+                        <property name="title" translatable="yes">Fractional width</property>
+                        <property name="subtitle" translatable="yes">Set the fractional width of the sidebar in % Defaults to 30.</property>
+                        <property name="adjustment">format_fractional_width_adj</property>
+                        <property name="lower">20</property>
+                        <property name="upper">60</property>
+                        <property name="page-increment">10</property>
+                        <property name="step-increment">1</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
