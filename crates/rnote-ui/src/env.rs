@@ -3,9 +3,7 @@ use crate::config;
 use std::ffi::OsStr;
 use std::path::{Component, Path, PathBuf};
 #[cfg(target_os = "windows")]
-use winreg::enums::HKEY_CURRENT_USER;
-#[cfg(target_os = "windows")]
-use winreg::RegKey;
+use winreg;
 
 pub(crate) fn lib_dir() -> anyhow::Result<PathBuf> {
     if cfg!(target_os = "windows") {
@@ -75,7 +73,7 @@ pub(crate) fn setup_env() -> anyhow::Result<()> {
 
         #[cfg(target_os = "windows")]
         {
-            let key = RegKey::predef(HKEY_CURRENT_USER);
+            let key = winreg::RegKey::predef(winreg::enums::HKEY_CURRENT_USER);
             let app_seting_key = key.open_subkey("software\\GSettings\\com\\github\\flxzt\\rnote");
 
             let gdk_workaround = match app_seting_key {
