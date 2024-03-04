@@ -27,6 +27,9 @@
       <object class="AdwClamp">
         <property name="maximum-size">1000</property>
         <property name="tightening-threshold">900</property>
+<!--        need to use px here and set it from the code as well-->
+        <property name="unit">0</property>
+<!--        only change for GDK_SCALE=2-->
         <property name="hexpand">true</property>
         <property name="vexpand">false</property>
         <property name="halign">fill</property>
