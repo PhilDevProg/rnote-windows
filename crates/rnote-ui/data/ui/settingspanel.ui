@@ -523,8 +523,7 @@ on a drawing pad</property>
                     <child>
                       <object class="AdwSwitchRow" id="init_gdkscale">
                         <property name="title" translatable="yes">Set GDK_SCALE to 2 </property>
-                        <property name="subtitle" translatable="yes">
-                          Force the GDK_SCALE to 2 (Windows only). Requires a restart
+                        <property name="subtitle" translatable="yes">Force the GDK_SCALE to 2 (Windows only). Requires a restart
                         </property>
                       </object>
                     </child>
