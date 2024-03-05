@@ -2,6 +2,7 @@
 use super::pensconfig::toolsconfig::ToolStyle;
 use super::PenBehaviour;
 use super::PenStyle;
+use crate::document::background::PatternStyle;
 use crate::engine::{EngineView, EngineViewMut};
 use crate::store::StrokeKey;
 use crate::{Camera, DrawableOnDoc, WidgetFlags};
@@ -474,15 +475,15 @@ impl PenBehaviour for Tools {
                         );
                     }
                     ToolStyle::VerticalSpaceGrid => {
-                        let y_offset = match engine_view.doc.background.pattern {
-                            background::PatternStyle::None => {
+                        let y_offset = match engine_view.document.background.pattern {
+                            PatternStyle::None => {
                                 element.pos[1] - self.verticalspacegrid_tool.pos_y
                             }
                             //Only activate this grid behavior when a grid pattern is selected (not None)
                             _ => {
                                 (element.pos[1] - self.verticalspacegrid_tool.pos_y)
                                     - ((element.pos[1] - self.verticalspacegrid_tool.pos_y)
-                                        % engine_view.doc.background.pattern_size[1])
+                                        % engine_view.document.background.pattern_size[1])
                             }
                         };
                         if y_offset.abs() > VerticalSpaceGridTool::Y_OFFSET_THRESHOLD {
@@ -496,8 +497,8 @@ impl PenBehaviour for Tools {
                             );
 
                             self.verticalspacegrid_tool.pos_y =
-                                match engine_view.doc.background.pattern {
-                                    background::PatternStyle::None => element.pos[1],
+                                match engine_view.document.background.pattern {
+                                    PatternStyle::None => element.pos[1],
                                     _ => self.verticalspacegrid_tool.pos_y + y_offset,
                                 };
                             // update the ref displacement point to which subsequent displacements will be compared

@@ -29,6 +29,7 @@ pub(crate) fn handle_pointer_controller_event(
     //std::thread::sleep(std::time::Duration::from_millis(100));
     //super::input::debug_gdk_event(event);
 
+    let mut is_primary_button = false;
     if reject_pointer_input(event, touch_drawing) {
         return (glib::Propagation::Proceed, pen_state);
     }
@@ -47,10 +48,14 @@ pub(crate) fn handle_pointer_controller_event(
 
                 // like in gtk4 'gesturestylus.c:120' stylus proximity is detected this way,
                 // in case ProximityIn & ProximityOut is not reported.
-                if gdk_modifiers.contains(gdk::ModifierType::BUTTON1_MASK) {
+                if gdk_modifiers.contains(gdk::ModifierType::BUTTON1_MASK)
+                    || canvas.engine_ref().primary_button_pressed
+                {
                     pen_state = PenState::Down;
                 } else {
-                    pen_state = PenState::Proximity;
+                    pen_state = PenState::Proximity; //forces the wrong proximity mode on windows ?
+                                                     // no, essential to put PenStateProximity
+                                                     // maybe force to Down state when the pressure is not zero ?
                 }
             } else {
                 // only handle no pressed button, primary and secondary mouse buttons.
@@ -91,6 +96,8 @@ pub(crate) fn handle_pointer_controller_event(
             if handle_shortcut_key {
                 let shortcut_key = retrieve_button_shortcut_key(gdk_button, is_stylus);
 
+                is_primary_button = shortcut_key == Some(ShortcutKey::StylusPrimaryButton);
+
                 if let Some(shortcut_key) = shortcut_key {
                     let (ep, wf) = canvas
                         .engine_mut()
@@ -107,6 +114,13 @@ pub(crate) fn handle_pointer_controller_event(
             tracing::trace!(
                 "canvas event ButtonRelease - gdk_button: {gdk_button}, is_stylus: {is_stylus}"
             );
+
+            match gdk_button {
+                gdk::BUTTON_SECONDARY => {
+                    is_primary_button = true; //reuse this variable here
+                }
+                _ => {}
+            };
 
             if is_stylus {
                 if gdk_button == gdk::BUTTON_PRIMARY
@@ -169,6 +183,16 @@ pub(crate) fn handle_pointer_controller_event(
         for (element, event_time) in elements {
             tracing::trace!("handle pen event element - element: {element:?}, pen_state: {pen_state:?}, event_time_delta: {:?}, modifier_keys: {modifier_keys:?}, pen_mode: {pen_mode:?}", now.duration_since(event_time));
 
+            if is_primary_button && gdk_event_type == gdk::EventType::ButtonRelease {
+                //release of the primary button
+                canvas.engine_mut().set_primary_button(false);
+                //force a temporary pen_state::Up to obtain the selection here
+                pen_state = PenState::Up; //exactly as the correct thing would act (if the linux-surface behavior is anything to go by)
+            }
+            if is_primary_button && gdk_event_type == gdk::EventType::ButtonPress {
+                // what we do is that we add a variable that is set to true as long as the primary button is pressed and released as well after
+                canvas.engine_mut().set_primary_button(true);
+            }
             match pen_state {
                 PenState::Up => {
                     canvas.enable_drawing_cursor(false);

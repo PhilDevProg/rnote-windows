@@ -170,6 +170,10 @@ pub struct Engine {
     #[serde(rename = "pen_sounds")]
     pen_sounds: bool,
 
+    // safer fix for the surface button
+    #[serde(skip)]
+    pub primary_button_pressed: bool,
+
     #[serde(skip)]
     audioplayer: Option<AudioPlayer>,
     #[serde(skip)]
@@ -206,6 +210,8 @@ impl Default for Engine {
             import_prefs: ImportPrefs::default(),
             export_prefs: ExportPrefs::default(),
             pen_sounds: false,
+
+            primary_button_pressed: false,
 
             audioplayer: None,
             visual_debug: false,
@@ -294,6 +300,10 @@ impl Engine {
         self.visual_debug = visual_debug;
         widget_flags.redraw = true;
         widget_flags
+    }
+
+    pub fn set_primary_button(&mut self, primary_button: bool) {
+        self.primary_button_pressed = primary_button;
     }
 
     /// Takes a snapshot of the current state.
