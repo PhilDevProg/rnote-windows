@@ -27,9 +27,6 @@
             <property name="margin-end">24</property>
             <property name="maximum-size">800</property>
             <property name="tightening-threshold">600</property>
-            <!-- change the unit to pixels here -->
-<!--            <property name="unit">0</property>-->
-            <!-- to set it as well to take the full space compared to the other settings panel ? -->
             <property name="hexpand">false</property>
             <property name="vexpand">true</property>
             <property name="valign">fill</property>

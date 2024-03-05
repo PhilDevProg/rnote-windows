@@ -593,21 +593,6 @@ impl RnSettingsPanel {
                 }
             }),
         );
-
-        // like the general_inertial_scolling row
-        imp.init_gdkscale.connect_active_notify(
-            clone!(@weak self as settingspanel, @weak appwindow => move |_row| {
-                // only if the settings panel is open
-                if !appwindow.split_view().is_collapsed()
-                {
-                    appwindow.overlays().dispatch_toast_text_singleton(
-                        &gettext("Application restart is required"),
-                        0,
-                        &mut settingspanel.imp().app_restart_toast_singleton.borrow_mut()
-                    );
-                }
-            }),
-        );
     }
 
     fn setup_format(&self, appwindow: &RnAppWindow) {
