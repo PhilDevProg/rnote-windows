@@ -123,14 +123,6 @@ pub(crate) async fn dialog_import_pdf_w_prefs(
     let pdf_import_adjust_document_row: adw::SwitchRow =
         builder.object("pdf_import_adjust_document_row").unwrap();
 
-    //set the unit to pixel for the clamp
-    let clamp: adw::Clamp = builder.object("clamp").unwrap();
-
-    if appwindow.gtk_scale() {
-        clamp.set_unit(adw::LengthUnit::Px);
-        tracing::debug!("setting unit to px, the gdk scale toggle is activated");
-    }
-
     dialog.set_transient_for(Some(appwindow));
 
     pdf_import_adjust_document_row
