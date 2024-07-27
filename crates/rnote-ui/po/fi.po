@@ -1,90 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the rnote package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: rnote\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-26 10:39+0200\n"
-"PO-Revision-Date: 2024-02-15 17:02+0000\n"
-"Last-Translator: Сергій <sergiy.goncharuk.1@gmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rnote/repo/uk/"
-">\n"
-"Language: uk\n"
+"PO-Revision-Date: 2024-06-10 12:09+0000\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/rnote/repo/fi/>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.4-dev\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: crates/rnote-ui/data/app.desktop.in.in:5
 #: crates/rnote-ui/data/app.metainfo.xml.in.in:9
 #: crates/rnote-ui/src/dialogs/mod.rs:33
 msgid "Sketch and take handwritten notes"
-msgstr "Малюй та роби нотатки"
+msgstr "Luonnostele ja tee käsinkirjoitettuja muistiinpanoja"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: crates/rnote-ui/data/app.desktop.in.in:15
 msgid "Gnome;GTK;Office;Graphics;Notes;"
-msgstr ""
-"Gnome;GTK;Office;Graphics;Notes;Офіс;Графіка;Примітки;Допис;Малювати;Нотатка;"
-"Зошит;"
+msgstr "Gnome;GTK;Office;Graphics;Notes;toimisto;grafiikka;muistiinpanot;"
 
 #: crates/rnote-ui/data/app.desktop.in.in:20
 #: crates/rnote-ui/data/ui/shortcuts.ui:20
 msgid "New Window"
-msgstr "Нове вікно"
+msgstr "Uusi ikkuna"
 
 #: crates/rnote-ui/data/app.metainfo.xml.in.in:21
 msgid ""
 "Rnote is a vector-based drawing app for sketching, handwritten notes and to "
 "annotate documents and pictures."
 msgstr ""
-"Rnote - векторний додаток для малювання, нотаток та анотування документів і "
-"зображень."
+"Rnote on vektoripohjainen piirrustussovellus luonnosteluun, "
+"käsinkirjoitettuihin muistiinpanoihin ja kommentien lisäämiseen "
+"asiakirjoihin sekä kuviin."
 
 #: crates/rnote-ui/data/app.metainfo.xml.in.in:25
 msgid ""
 "Disclaimer: The file format is still unstable. It might change and break "
 "compatibility between versions."
 msgstr ""
-"Увага: формат файлу все ще нестабільний. Він може змінитися та порушити "
-"сумісність між версіями."
+"Vastuuvapautuslauseke: Tiedostomuoto on edelleen epävakaa. Se saattaa "
+"muuttua ja rikkoa yhteensopivuuden versioiden välillä."
 
 #: crates/rnote-ui/data/app.metainfo.xml.in.in:35
 msgid "An overview"
-msgstr "Огляд"
+msgstr "Yleisnäkymä"
 
 #: crates/rnote-ui/data/app.metainfo.xml.in.in:40
 msgid "A selection"
-msgstr "Вибір"
+msgstr "Valinta"
 
 #: crates/rnote-ui/data/app.metainfo.xml.in.in:45
 msgid "Write text with the typewriter"
-msgstr "Писати текст на друкарській машинці"
+msgstr "Kirjoita tekstiä kirjoituskoneella"
 
 #: crates/rnote-ui/data/app.metainfo.xml.in.in:50
 msgid "Hide toolbars with the focus mode"
-msgstr "Приховати панелі інструментів у режимі фокусування"
+msgstr "Piilota työkalupalkit keskittymistilassa"
 
 #: crates/rnote-ui/data/app.metainfo.xml.in.in:55
 msgid "Quickly access files through workspace"
-msgstr "Швидкий доступ до файлів через робочий простір"
+msgstr "Käytä tiedostoja nopeasti työtilan avulla"
 
 #: crates/rnote-ui/data/app.metainfo.xml.in.in:60
 msgid "Adjust document settings"
-msgstr "Підлаштувати параметри документа"
+msgstr "Määritä asiakirjan asetukset"
 
 #: crates/rnote-ui/data/app.metainfo.xml.in.in:65
 msgid "Configure action shortcuts"
-msgstr "Налаштувати комбінації для швидких дій"
+msgstr "Määritä pikanäppäinten toiminnot"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:5
 #: crates/rnote-ui/data/ui/shortcuts.ui:185
 msgid "Clear Document"
-msgstr "Очистити документ"
+msgstr "Tyhjennä asiakirja"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:6
 msgid "This clears the entire document. Please confirm."
-msgstr "Це очистить весь документ. Підтвердіть, будь ласка."
+msgstr "Tämä tyhjentää koko asiakirjan. Vahvista tyhjentäminen."
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:10
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:22
@@ -98,108 +100,108 @@ msgstr "Це очистить весь документ. Підтвердіть,
 #: crates/rnote-ui/data/ui/dialogs/import.ui:213
 #: crates/rnote-ui/src/workspacebrowser/widgethelper.rs:31
 msgid "Cancel"
-msgstr "Скасувати"
+msgstr "Peru"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:11
 msgid "Clear"
-msgstr "Очистити"
+msgstr "Tyhjennä"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:16
 #: crates/rnote-ui/data/ui/mainheader.ui:22
 #: crates/rnote-ui/src/canvas/mod.rs:592
 msgid "New Document"
-msgstr "Новий документ"
+msgstr "Uusi asiakirja"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:17
 msgid ""
 "Creating a new document will discard any unsaved changes.\n"
 "Do you want to save the current document?"
 msgstr ""
-"Створення нового документа видалить всі незбережені зміни.\n"
-"Зберегти поточний документ?"
+"Uuden asiakirjan luominen hylkää kaikki tallentamattomat muutokset.\n"
+"Haluatko tallentaa nykyisen asiakirjan?"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:23
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:41
 msgid "Discard"
-msgstr "Відхилити"
+msgstr "Hylkää"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:24
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:42
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:60
 #: crates/rnote-ui/src/dialogs/export.rs:42
 msgid "Save"
-msgstr "Зберегти"
+msgstr "Tallenna"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:29
 msgid "Close Tab"
-msgstr "Закрити вкладку"
+msgstr "Sulje välilehti"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:30
 msgid ""
 "This tab contains unsaved changes.\n"
 "Changes which are not saved will be permanently lost."
 msgstr ""
-"Ця вкладка містить незбережені зміни.\n"
-"Незбережені зміни буде остаточно втрачено."
+"Tämä välilehti sisältää tallentamattomia muutoksia.\n"
+"Muutokset, joita ei tallenneta, häviävät pysyvästi."
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:47
 msgid "Close Window"
-msgstr "Закрити вікно"
+msgstr "Sulje ikkuna"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:48
 msgid ""
 "Some opened files contain unsaved changes.\n"
 "Changes which are not saved will be permanently lost."
 msgstr ""
-"Деякі відкриті файли містять незбережені зміни.\n"
-"Незбережені зміни буде остаточно втрачено."
+"Jotkin avoimet tiedostot sisältävät tallentamattomia muutoksia.\n"
+"Muutokset, joita ei tallenneta, häviävät pysyvästi."
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:54
 msgid "Unsaved Documents"
-msgstr "Незбережені документи"
+msgstr "Tallentamattomia asiakirjoja"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:59
 msgid "Discard All"
-msgstr "Скасувати все"
+msgstr "Hylkää kaikki"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:65
 msgid "Edit Workspace"
-msgstr "Редагувати Робочу область"
+msgstr "Muokkaa työtilaa"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:79
 #: crates/rnote-ui/data/ui/settingspanel.ui:241
 #: crates/rnote-ui/src/workspacebrowser/widgethelper.rs:36
 msgid "Apply"
-msgstr "Застосувати"
+msgstr "Toteuta"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:119
 msgid "Workspace Name"
-msgstr "Назва робочої області"
+msgstr "Työtilan nimi"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:124
 msgid "Icon"
-msgstr "Піктограма"
+msgstr "Kuvake"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:125
 msgid "Change the workspace icon"
-msgstr "Змінити піктограму робочої області"
+msgstr "Vaihda työtilan kuvake"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:145
 #: crates/rnote-ui/data/ui/settingspanel.ui:293
 msgid "Color"
-msgstr "Колір"
+msgstr "Väri"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:146
 msgid "Change the workspace color"
-msgstr "Змінити колір робочої області"
+msgstr "Vaihda työtilan väriä"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:160
 msgid "Directory"
-msgstr "Тека"
+msgstr "Kansio"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:161
 msgid "Change the workspace directory"
-msgstr "Змінити теку робочої області"
+msgstr "Vaihda työtilan kansio"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:170
 #: crates/rnote-ui/data/ui/dialogs/export.ui:290
@@ -208,16 +210,16 @@ msgstr "Змінити теку робочої області"
 #: crates/rnote-ui/src/dialogs/export.rs:462
 #: crates/rnote-ui/src/dialogs/mod.rs:522
 msgid "- no directory selected -"
-msgstr "- теку не вибрано -"
+msgstr "- kansiota ei ole valittu -"
 
 #: crates/rnote-ui/data/ui/dialogs/dialogs.ui:185
 msgid "Change the directory"
-msgstr "Змінити теку"
+msgstr "Vaihda kansio"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:5
 #: crates/rnote-ui/src/dialogs/export.rs:285
 msgid "Export Document"
-msgstr "Експортувати документ"
+msgstr "Vie asiakirja"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:19
 #: crates/rnote-ui/data/ui/dialogs/export.ui:188
@@ -225,17 +227,17 @@ msgstr "Експортувати документ"
 #: crates/rnote-ui/src/dialogs/export.rs:1025
 #: crates/rnote-ui/src/dialogs/export.rs:1088
 msgid "Export"
-msgstr "Експортувати"
+msgstr "Vie"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:74
 #: crates/rnote-ui/data/ui/dialogs/export.ui:483
 msgid "Export File"
-msgstr "Експортувати файл"
+msgstr "Vie tiedosto"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:75
 #: crates/rnote-ui/data/ui/dialogs/export.ui:484
 msgid "Select the export file"
-msgstr "Виберіть файл експорту"
+msgstr "Valitse vientitiedosto"
 
 #. force the user to pick another file
 #: crates/rnote-ui/data/ui/dialogs/export.ui:84
@@ -249,60 +251,60 @@ msgstr "Виберіть файл експорту"
 #: crates/rnote-ui/src/dialogs/export.rs:769
 #: crates/rnote-ui/src/dialogs/export.rs:820
 msgid "- no file selected -"
-msgstr "- файл не вибрано -"
+msgstr "- tiedostoa ei ole valittu -"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:108
 #: crates/rnote-ui/data/ui/dialogs/export.ui:319
 #: crates/rnote-ui/data/ui/dialogs/export.ui:517
 msgid "Export Preferences"
-msgstr "Параметри експорту"
+msgstr "Viennin asetukset"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:112
 #: crates/rnote-ui/data/ui/dialogs/export.ui:323
 #: crates/rnote-ui/data/ui/dialogs/export.ui:521
 msgid "With Background"
-msgstr "З фоном"
+msgstr "Taustakuvan kera"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:113
 #: crates/rnote-ui/data/ui/dialogs/export.ui:324
 #: crates/rnote-ui/data/ui/dialogs/export.ui:522
 msgid "Set whether the background should be exported"
-msgstr "Чи експортувати фон"
+msgstr "Viedäänkö taustakuva"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:118
 #: crates/rnote-ui/data/ui/dialogs/export.ui:329
 #: crates/rnote-ui/data/ui/dialogs/export.ui:527
 msgid "With Pattern"
-msgstr "З шаблоном"
+msgstr "Kuvion kera"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:119
 #: crates/rnote-ui/data/ui/dialogs/export.ui:330
 #: crates/rnote-ui/data/ui/dialogs/export.ui:528
 msgid "Set whether the background pattern should be exported"
-msgstr "Чи експортувати шаблон фону"
+msgstr "Viedäänkö taustakuvio"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:124
 #: crates/rnote-ui/data/ui/dialogs/export.ui:335
 #: crates/rnote-ui/data/ui/dialogs/export.ui:533
 msgid "Optimize for Printing"
-msgstr "Оптимізувати для друку"
+msgstr "Optimoi tulostusta varten"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:125
 #: crates/rnote-ui/data/ui/dialogs/export.ui:336
 #: crates/rnote-ui/data/ui/dialogs/export.ui:534
 msgid "Set whether the content should be optimized for printing"
-msgstr "Чи оптимізувати вміст для друку"
+msgstr "Optimoidaanko sisältö tulostusta varten"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:130
 #: crates/rnote-ui/data/ui/dialogs/export.ui:341
 #: crates/rnote-ui/data/ui/dialogs/export.ui:539
 msgid "Export Format"
-msgstr "Формат експорту"
+msgstr "Vientimuoto"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:131
 #: crates/rnote-ui/data/ui/dialogs/export.ui:342
 msgid "The export format"
-msgstr "Тип файлу, який буде експортовано"
+msgstr "Viennissä käytettävä muoto"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:135
 #: crates/rnote-ui/data/ui/dialogs/export.ui:346
@@ -311,12 +313,12 @@ msgstr "Тип файлу, який буде експортовано"
 #: crates/rnote-ui/src/dialogs/export.rs:635
 #: crates/rnote-ui/src/dialogs/export.rs:954
 msgid "Svg"
-msgstr "Svg"
+msgstr "SVG"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:136
 #: crates/rnote-ui/src/dialogs/export.rs:315
 msgid "Pdf"
-msgstr "Pdf"
+msgstr "PDF"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:137
 #: crates/rnote-ui/src/dialogs/export.rs:326
@@ -326,90 +328,74 @@ msgstr "Xopp"
 #: crates/rnote-ui/data/ui/dialogs/export.ui:145
 #: crates/rnote-ui/data/ui/dialogs/export.ui:356
 msgid "Page Order"
-msgstr "Порядок сторінок"
+msgstr "Sivujärjestys"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:146
-#, fuzzy
-#| msgid ""
-#| "The page order when documents with layouts\n"
-#| "that expand in horizontal and vertical directions\n"
-#| "are cut into pages"
 msgid ""
 "The page order when documents with layouts\n"
 "that expand in horizontal and vertical directions\n"
 "are cut into pages"
 msgstr ""
-"Порядок сторінок, коли документи з макетами,\n"
-"що розгортаються в горизонтальному та вертикальному\n"
-"напрямках, розрізаються на сторінки"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:152
 #: crates/rnote-ui/data/ui/dialogs/export.ui:363
 msgid "Horizontal First"
-msgstr "Спочатку по горизонталі"
+msgstr "Vaakasuunta ensin"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:153
 #: crates/rnote-ui/data/ui/dialogs/export.ui:364
 msgid "Vertical First"
-msgstr "Спочатку по вертикалі"
+msgstr "Pystysuunta ensin"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:174
 #: crates/rnote-ui/src/dialogs/export.rs:615
 msgid "Export Document Pages"
-msgstr "Експортувати сторінки документа"
+msgstr "Vie asiakirjan sivut"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:260
 msgid "Page Files Naming:"
-msgstr "Назви файлів сторінок:"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:280
 msgid "Export Directory"
-msgstr "Експортувати теку"
+msgstr "Vientikansio"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:281
 msgid "Select the export directory"
-msgstr "Виберіть теку експорту"
+msgstr "Valitse vientikansio"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:312
 msgctxt ""
 "When pages are exported this is the base name, followed by: - Page 0,1,.."
 msgid "Export Files Stem Name"
-msgstr "Префікс назви файлів для експорту"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:347
 #: crates/rnote-ui/data/ui/dialogs/export.ui:545
 #: crates/rnote-ui/src/dialogs/export.rs:646
 #: crates/rnote-ui/src/dialogs/export.rs:965
 msgid "Png"
-msgstr "Png"
+msgstr "PNG"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:348
 #: crates/rnote-ui/data/ui/dialogs/export.ui:546
 #: crates/rnote-ui/src/dialogs/export.rs:659
 #: crates/rnote-ui/src/dialogs/export.rs:978
 msgid "Jpeg"
-msgstr "Jpeg"
+msgstr "JPEG"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:357
-#, fuzzy
-#| msgid ""
-#| "The page order when documents with layouts\n"
-#| "that expand in horizontal and vertical directions\n"
-#| "are cut into pages"
 msgid ""
 "The page order when documents with layouts\n"
 "    that expand in horizontal and vertical directions\n"
 "    are cut into pages"
 msgstr ""
-"Порядок сторінок, коли документи з макетами,\n"
-"що розгортаються в горизонтальному та вертикальному\n"
-"напрямках, розрізаються на сторінки"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:372
 #: crates/rnote-ui/data/ui/dialogs/export.ui:554
 #: crates/rnote-ui/data/ui/dialogs/import.ui:160
 msgid "Bitmap Scale-Factor"
-msgstr "Масштаб растрового зображення"
+msgstr "Bittikartan skaalauskerroin"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:373
 #: crates/rnote-ui/data/ui/dialogs/import.ui:161
@@ -421,27 +407,27 @@ msgid ""
 "Set the bitmap scale factor in relation\n"
 "    to the actual size on the document"
 msgstr ""
-"Встановити масштаб растрового зображення\n"
-"відносно фактичного розміру документа"
+"Aseta bittikartan skaalauskerroin suhteessa\n"
+"asiakirjan todelliseen kokoon"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:381
 #: crates/rnote-ui/data/ui/dialogs/export.ui:563
 msgid "Jpeg Quality"
-msgstr "Якість Jpeg"
+msgstr "JPEG:n laatu"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:382
 #: crates/rnote-ui/data/ui/dialogs/export.ui:564
 msgid "Set the quality of the Jpeg image (1 - 100)"
-msgstr "Якість зображення JPEG (1 - 100)"
+msgstr "Aseta Jpeg-kuvan laatu (1 - 100)"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:414
 #: crates/rnote-ui/src/dialogs/export.rs:933
 msgid "Export Selection"
-msgstr "Експортувати вибране"
+msgstr "Vie valinta"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:540
 msgid "The export image format"
-msgstr "Формат експортованого зображення"
+msgstr "Viennin kuvamuoto"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:555
 #, fuzzy
@@ -452,111 +438,106 @@ msgid ""
 "Set the bitmap scale factor in relation\n"
 "to the actual size on the document"
 msgstr ""
-"Встановити масштаб растрового зображення\n"
-"відносно фактичного розміру документа"
+"Aseta bittikartan skaalauskerroin suhteessa\n"
+"asiakirjan todelliseen kokoon"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:571
 msgid "Margin"
-msgstr "Відступ"
+msgstr "Reunus"
 
 #: crates/rnote-ui/data/ui/dialogs/export.ui:572
 msgid "Set the margin around the selected area"
-msgstr "Встановіть поле навколо виділеної області"
+msgstr "Aseta reunus valitun alueen ympärille"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:5
 msgid "Import Pdf"
-msgstr "Імпортувати Pdf"
+msgstr "Tuo PDF"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:19
 #: crates/rnote-ui/data/ui/dialogs/import.ui:218
 #: crates/rnote-ui/src/dialogs/import.rs:94
 msgid "Import"
-msgstr "Імпортувати"
+msgstr "Tuo"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:63
 msgid "Info"
-msgstr "Інформація"
+msgstr "Tiedot"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:81
 msgid "Pdf Import Preferences"
-msgstr "Параметри імпорту Pdf"
+msgstr "PDF-tuonnin asetukset"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:85
 msgid "Start Page"
-msgstr "Початкова сторінка"
+msgstr "Aloitussivu"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:94
 msgid "End Page"
-msgstr "Кінцева сторінка"
+msgstr "Lopetussivu"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:103
-#, fuzzy
-#| msgid "Adjust document settings"
 msgid "Adjust Document"
-msgstr "Підлаштувати параметри документа"
+msgstr "Säädä asiakirjaa"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:104
-#, fuzzy
-#| msgid "Set whether the background pattern should be exported"
 msgid "Whether the document layout should be adjusted to the Pdf"
-msgstr "Чи експортувати шаблон фону"
+msgstr "Säädetänkö asiakirjan asettelua vastaamaan PDF:ää"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:109
 msgid "Page Width (%)"
-msgstr "Ширина сторінки (%)"
+msgstr "Sivun leveys (%)"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:110
 msgid "Set the width of imported Pdf's in percentage to the format width"
 msgstr ""
-"Встановити ширину імпортованих Pdf-файлів у відсотках від ширини аркуша"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:117
 msgid "Page Spacing"
-msgstr "Міжсторінковий інтервал"
+msgstr "Sivujen välistys"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:118
 msgid "How Pdf pages are spaced"
-msgstr "Як розділені сторінки Pdf"
+msgstr "Miten PDF:n sivut välistetään"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:122
 msgid "Continuous"
-msgstr "Безперервно"
+msgstr "Jatkuvasti"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:123
 msgid "One per Document Page"
-msgstr "Один на сторінку документа"
+msgstr "Yksi asiakirjan sivua kohden"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:131
 msgid "Pages Type"
-msgstr "Тип сторінок"
+msgstr "Sivujen tyyppi"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:132
 msgid "Set whether Pdf's should be imported as vector or bitmap images"
-msgstr "Імпортувати Pdf-файли як векторні чи растрові зображення"
+msgstr "Tuodaanko PDF:t vektori- vai bittikarttakuvina"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:144
 msgid "Vector"
-msgstr "Вектор"
+msgstr "Vektori"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:151
 msgid "Bitmap"
-msgstr "Растр"
+msgstr "Bittikartta"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:169
 msgid "Page Borders"
-msgstr "Межі сторінок"
+msgstr "Sivun reunat"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:170
 msgid "Whether the pages have drawn borders"
-msgstr "Чи межі сторінок намальовані"
+msgstr "Piirretäänkö sivuille reunukset"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:204
 msgid "Import Xournal++ File"
-msgstr "Імпортувати файл Xournal++"
+msgstr "Tuo Xournal++-tiedosto"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:247
 msgid "Xournal++ File Import Preferences"
-msgstr "Налаштування імпорту файлів Xournal++"
+msgstr "Xournal++-tiedostotuonnin asetukset"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:251
 msgid "DPI"
@@ -564,314 +545,314 @@ msgstr "DPI"
 
 #: crates/rnote-ui/data/ui/dialogs/import.ui:252
 msgid "Set the preferred DPI for the Xournal++ file"
-msgstr "Бажаний DPI для файлу Xournal++"
+msgstr "Aseta ensisijainen DPI Xournal++-tiedostolle"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:18
 msgid "Brush Style"
-msgstr "Стиль пензля"
+msgstr "Siveltimen tyyli"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:33
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:149
 msgid "Brush Configuration"
-msgstr "Налаштування пензля"
+msgstr "Siveltimen asetukset"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:66
 msgid "Brush Styles"
-msgstr "Стилі пензля"
+msgstr "Siveltimen tyylit"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:95
 msgid "Marker"
-msgstr "Маркер"
+msgstr "Merkitsin"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:96
 msgid "Mark underneath other strokes"
-msgstr "Позначити під іншими штрихами"
+msgstr "Merkitse muiden piirrosvetojen alapuolelle"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:107
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:201
 msgid "Solid"
-msgstr "Твердий"
+msgstr "Kiinteä"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:108
 msgid "Draw solid color strokes"
-msgstr "Малювання суцільними кольорами"
+msgstr "Piirrä kiinteiden värien vetoja"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:119
 msgid "Textured"
-msgstr "Текстурований"
+msgstr "Teksturoitu"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:120
 msgid "Draw textured strokes"
-msgstr "Нанесення текстурованих штрихів"
+msgstr "Piirrä teksturoituja vetoja"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:170
 msgid "Path Modelling"
-msgstr "Моделювання шляху"
+msgstr "Polun mallinnus"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:187
 msgid "Simple"
-msgstr "Простий"
+msgstr "Yksinkertainen"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:188
 msgid "Produces line segments from the raw input.\n"
-msgstr "Створює сегменти лінії на пряму з необроблених даних.\n"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:194
 msgid "Curved"
-msgstr "Вигнутий"
+msgstr "Kaareva"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:195
 msgid "Produces smooth, curved segments.\n"
-msgstr "Створює плавні, вигнуті сегменти.\n"
+msgstr "Tuottaa sulavia, kaarevia lohkoja.\n"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:201
 msgid "Modeled"
-msgstr "Змодельовано"
+msgstr "Mallinnettu"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:202
 msgid ""
 "Produces a modeled path with physics based algorithms.\n"
 "Results in the best looking handwriting."
 msgstr ""
-"Створює змодельований шлях за допомогою фізичних алгоритмів.\n"
-"Утворює найкращий почерк."
+"Tuottaa mallinnetun polun fysiikkaan pohjautuvilla algoritmeillä.\n"
+"Tuottaa parhaalta näyttävän käsinkirjoituksen."
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:211
 msgid "Solid Style"
-msgstr "Суцільний стиль"
+msgstr "Kiinteä tyyli"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:214
 msgid "Pressure Curve"
-msgstr "Крива тиску"
+msgstr "Painekäyrä"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:215
 msgid "Choose a pressure curve"
-msgstr "Виберіть криву тиску"
+msgstr "Valitse painekäyrä"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:219
 msgid "Constant"
-msgstr "Постійна"
+msgstr "Vakio"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:220
 msgid "Linear"
-msgstr "Лінійна"
+msgstr "Lineaarinen"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:221
 msgid "Square root"
-msgstr "Корінь квадратний"
+msgstr "Neliöjuuri"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:222
 msgid "Cubic root"
-msgstr "Корінь кубічний"
+msgstr "Kuutiojuuri"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:223
 msgid "Quadratic Parabola"
-msgstr "Квадратична парабола"
+msgstr "Neliöllinen paraabeli"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:224
 msgid "Cubic Parabola"
-msgstr "Кубічна парабола"
+msgstr "Kuutiollinen paraabeli"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:235
 msgid "Textured Style"
-msgstr "Текстурований стиль"
+msgstr "Teksturoitu tyyli"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:238
 msgid "Density"
-msgstr "Щільність"
+msgstr "Tiheys"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:239
 msgid "The density is the amount of dots per 10x10 area"
-msgstr "Щільність - це кількість точок на площу 10x10"
+msgstr "Tiheys on pisteiden määrä 10x10-alueelle"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:248
 msgctxt ""
 "Drawing with a textured pen, how the dots of the texture are distributed"
 msgid "Stroke Dots Position Distribution"
-msgstr "Розподіл положення штрихових точок"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:249
 msgid "Choose a dots position probability distribution"
-msgstr "Виберіть розподіл ймовірності розташування точок"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:253
 msgctxt "A variant of the textured pen texture distribution"
 msgid "Uniform"
-msgstr "Рівномірно"
+msgstr "Yhtenäinen"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:254
 msgctxt "A variant of the textured pen texture distribution"
 msgid "Normal"
-msgstr "Нормально"
+msgstr "Normaali"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:255
 msgctxt "A variant of the textured pen texture distribution"
 msgid "Exponential"
-msgstr "Експоненціально"
+msgstr "Eksponentiaalinen"
 
 #: crates/rnote-ui/data/ui/penssidebar/brushpage.ui:256
 msgctxt "A variant of the textured pen texture distribution"
 msgid "Reverse Exponential"
-msgstr "Зворотно експоненціально"
+msgstr "Käänteinen eksponentiaalinen"
 
 #: crates/rnote-ui/data/ui/penssidebar/eraserpage.ui:21
 msgid "Trash Strokes"
-msgstr "Видалити штрихи"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/eraserpage.ui:31
 msgid "Split Strokes"
-msgstr "Розділені штрихи"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/penssidebar.ui:17
 #: crates/rnote-ui/src/settingspanel/penshortcutmodels.rs:81
 msgid "Brush"
-msgstr "Пензлик"
+msgstr "Sivellin"
 
 #: crates/rnote-ui/data/ui/penssidebar/penssidebar.ui:33
 #: crates/rnote-ui/src/settingspanel/penshortcutmodels.rs:82
 msgid "Shaper"
-msgstr "Шейпер"
+msgstr "Muotoillin"
 
 #: crates/rnote-ui/data/ui/penssidebar/penssidebar.ui:49
 #: crates/rnote-ui/src/settingspanel/penshortcutmodels.rs:83
 msgid "Typewriter"
-msgstr "Друкарська машинка"
+msgstr "Kirjoituskone"
 
 #: crates/rnote-ui/data/ui/penssidebar/penssidebar.ui:65
 #: crates/rnote-ui/src/settingspanel/penshortcutmodels.rs:84
 msgid "Eraser"
-msgstr "Гумка"
+msgstr "Pyyhekumi"
 
 #: crates/rnote-ui/data/ui/penssidebar/penssidebar.ui:81
 #: crates/rnote-ui/src/settingspanel/penshortcutmodels.rs:85
 msgid "Selector"
-msgstr "Виділення"
+msgstr "Valitsin"
 
 #: crates/rnote-ui/data/ui/penssidebar/penssidebar.ui:97
 #: crates/rnote-ui/src/settingspanel/penshortcutmodels.rs:86
 msgid "Tools"
-msgstr "Інструменти"
+msgstr "Työkalut"
 
 #: crates/rnote-ui/data/ui/penssidebar/selectorpage.ui:22
 msgid "Select With a Polygon"
-msgstr "Вибрати за допомогою багатокутника"
+msgstr "Valitse monikulmiolla"
 
 #: crates/rnote-ui/data/ui/penssidebar/selectorpage.ui:32
 msgid "Select With a Rectangle"
-msgstr "Вибрати за допомогою прямокутника"
+msgstr "Valitse suorakulmiolla"
 
 #: crates/rnote-ui/data/ui/penssidebar/selectorpage.ui:42
 msgid "Select One by One"
-msgstr "Виберіть один за одним"
+msgstr "Valitse yksittäin"
 
 #: crates/rnote-ui/data/ui/penssidebar/selectorpage.ui:52
 msgid "Select Intersecting Path"
-msgstr "Вибрати пересічний шлях"
+msgstr "Valitse läpileikkaava polku"
 
 #: crates/rnote-ui/data/ui/penssidebar/selectorpage.ui:73
 msgid "Lock Aspectratio While Resizing the Selection"
-msgstr "Зафіксувати співвідношення сторін під час зміни розміру виділення"
+msgstr "Lukitse kuvasuhde valinnan kokoa muuttaessa"
 
 #: crates/rnote-ui/data/ui/penssidebar/selectorpage.ui:83
 msgid "Select All Strokes"
-msgstr "Вибрати всі штрихи"
+msgstr "Valitse kaikki vedot"
 
 #: crates/rnote-ui/data/ui/penssidebar/selectorpage.ui:94
 msgid "Deselect All Strokes"
-msgstr "Скасувати вибір всіх штрихів"
+msgstr "Poista kaikkien vetojen valinnat"
 
 #: crates/rnote-ui/data/ui/penssidebar/selectorpage.ui:105
 msgid "Invert Color Brightness of All Selected Strokes"
-msgstr "Інвертувати яскравість кольорів усіх обраних штрихів"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/selectorpage.ui:116
 #: crates/rnote-ui/data/ui/shortcuts.ui:236
 msgid "Duplicate Selection"
-msgstr "Дублікат виділення"
+msgstr "Monista valinta"
 
 #: crates/rnote-ui/data/ui/penssidebar/selectorpage.ui:127
 msgid "Delete Selection"
-msgstr "Видалити виділення"
+msgstr "Poista valinta"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:19
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:248
 msgid "Shape Builders"
-msgstr "Конструктори фігур"
+msgstr "Muotorakentajat"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:35
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:290
 msgid "Constraints"
-msgstr "Обмеження"
+msgstr "Rajoitteet"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:64
 msgid "Shaper Style"
-msgstr "Стиль фігури"
+msgstr "Muotoillimen tyyli"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:77
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:170
 msgid "Shape Configuration"
-msgstr "Налаштування форми"
+msgstr "Muodon asetukset"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:101
 msgid "Shaper Styles"
-msgstr "Стилі форми"
+msgstr "Muotoillimen tyylit"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:130
 msgid "Smooth"
-msgstr "Гладкий"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:141
 msgid "Rough"
-msgstr "Грубий"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:192
 msgid "Rough style"
-msgstr "Грубий стиль"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:196
 msgid "Fill Style"
-msgstr "Стиль заливки"
+msgstr "Täyttötyyli"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:197
 msgid "Choose a fill style"
-msgstr "Виберіть стиль заповнення"
+msgstr "Valitse täyttötyyli"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:202
 msgid "Hachure"
-msgstr "Хачуре"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:203
 msgid "Zig-Zag"
-msgstr "Зіґ-заґ"
+msgstr "Mutkitteleva"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:204
 msgid "Zig-Zag Line"
-msgstr "Зиґзаґоподібна лінія"
+msgstr "Mutkitteleva viiva"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:205
 msgid "Crosshatch"
-msgstr "Перехресне штрихування"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:206
 #: crates/rnote-ui/data/ui/settingspanel.ui:322
 msgid "Dots"
-msgstr "Точки"
+msgstr "Pisteet"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:207
 msgid "Dashed"
-msgstr "Штриховий"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:215
 msgid "Hachure Angle"
-msgstr "Кут нахилу"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:216
 msgid "Set the angle of hachure fills"
-msgstr "Встановити кут заповнення гачуру"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:319
 msgid "Enabled"
-msgstr "Увімкнено"
+msgstr "Käytössä"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:320
 msgid ""
@@ -879,9 +860,9 @@ msgid ""
 "enable/disable constraints\n"
 "when this switch is off/on"
 msgstr ""
-"Утримуйте Ctrl, щоб тимчасово\n"
-"увімкнути/вимкнути обмеження\n"
-"коли цей перемикач вимкнено/увімкнено"
+"Pidä Ctrl pohjassa väliaikaisesti\n"
+"käyttääksesi/poistaaksesi rajoitteita\n"
+"kun tämä kytkin on pois/päällä"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:327
 msgid "1:1"
@@ -893,242 +874,240 @@ msgstr "3:2"
 
 #: crates/rnote-ui/data/ui/penssidebar/shaperpage.ui:337
 msgid "Golden Ratio (1:1.618)"
-msgstr "Золотий перетин (1:1.618)"
+msgstr "Kultainen leikkaus (1:1.618)"
 
 #: crates/rnote-ui/data/ui/penssidebar/toolspage.ui:19
 msgid "Insert Vertical Space"
-msgstr "Вставити вертикальний простір"
+msgstr "Lisää tilaa pystysuuntaisesti"
 
 #: crates/rnote-ui/data/ui/penssidebar/toolspage.ui:29
 #: crates/rnote-ui/data/ui/shortcuts.ui:108
 msgid "Move View"
-msgstr "Перемістити перегляд"
+msgstr "Siirrä näkymää"
 
 #: crates/rnote-ui/data/ui/penssidebar/toolspage.ui:40
 msgid "Zoom In/Out"
-msgstr "Збільшити/зменшити"
+msgstr "Lähennä/loitonna"
 
 #: crates/rnote-ui/data/ui/penssidebar/typewriterpage.ui:43
 msgid "Pick And Insert Emoji"
-msgstr "Виберіть та вставте емодзі"
+msgstr "Valitse ja syötä emoji"
 
 #: crates/rnote-ui/data/ui/penssidebar/typewriterpage.ui:68
 msgid "Reset Text Attributes"
-msgstr "Скинути атрибути тексту"
+msgstr "Nollaa tekstiominaisuudet"
 
 #: crates/rnote-ui/data/ui/penssidebar/typewriterpage.ui:77
 msgid "Bold"
-msgstr "Жирний"
+msgstr "Lihavointi"
 
 #: crates/rnote-ui/data/ui/penssidebar/typewriterpage.ui:86
 msgid "Italic"
-msgstr "Курсив"
+msgstr "Kursivointi"
 
 #: crates/rnote-ui/data/ui/penssidebar/typewriterpage.ui:95
 msgid "Underline"
-msgstr "Підкреслити"
+msgstr "Alleviivaus"
 
 #: crates/rnote-ui/data/ui/penssidebar/typewriterpage.ui:104
 msgid "Strikethrough"
-msgstr "Закреслення"
+msgstr "Yliviivaus"
 
 #: crates/rnote-ui/data/ui/penssidebar/typewriterpage.ui:126
 msgid "Align Left"
-msgstr "Вирівняти ліворуч"
+msgstr "Tasaus vasemmalle"
 
 #: crates/rnote-ui/data/ui/penssidebar/typewriterpage.ui:133
 msgid "Align Center"
-msgstr "Вирівняти по центру"
+msgstr "Tasaus keskelle"
 
 #: crates/rnote-ui/data/ui/penssidebar/typewriterpage.ui:140
 msgid "Align Right"
-msgstr "Вирівняти праворуч"
+msgstr "Tasaus oikealle"
 
 #: crates/rnote-ui/data/ui/penssidebar/typewriterpage.ui:147
 msgid "Fill"
-msgstr "Заповнити"
+msgstr "Täyttö"
 
 #: crates/rnote-ui/data/ui/workspacesbar/workspacesbar.ui:60
 msgid "Move Selected Workspace Up"
-msgstr "Перемістити вибрану робочу область вгору"
+msgstr "Siirrä valittu työtila ylös"
 
 #: crates/rnote-ui/data/ui/workspacesbar/workspacesbar.ui:69
 msgid "Move Selected Workspace Down"
-msgstr "Перемістити вибрану робочу область вниз"
+msgstr "Siirrä valittu työtila alas"
 
 #: crates/rnote-ui/data/ui/workspacesbar/workspacesbar.ui:80
 msgid "Add Workspace"
-msgstr "Додати робочу область"
+msgstr "Lisää työtila"
 
 #: crates/rnote-ui/data/ui/workspacesbar/workspacesbar.ui:89
 msgid "Remove Selected Workspace"
-msgstr "Видалити вибрану робочу область"
+msgstr "Poista valittu työtila"
 
 #: crates/rnote-ui/data/ui/workspacesbar/workspacesbar.ui:99
 msgid "Edit Selected Workspace"
-msgstr "Редагувати вибрану робочу область"
+msgstr "Muokkaa valittua työtilaa"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:24
 msgid "Co_lor Scheme"
-msgstr "_Стиль додатку"
+msgstr "_Väriteema"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:26
 msgid "Use _System Colors"
-msgstr "Використовувати с_тиль системи"
+msgstr "Käytä _järjestelmän värejä"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:31
 msgid "Use _Light Colors"
-msgstr "Використовувати _світлий стиль"
+msgstr "Käytä _vaaleita värejä"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:36
 msgid "Use _Dark Colors"
-msgstr "Використовувати _темний стиль"
+msgstr "Käytä _tummia värejä"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:42
 msgid "Developer _Menu"
-msgstr "_Меню розробника"
+msgstr "_Kehittäjävalikko"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:47
 msgid "Visual _Debugging"
-msgstr "Графічне _налагодження"
+msgstr "Visuaalinen _vianjäljitys"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:51
 msgid "Export Engine _State"
-msgstr "Експортувати _стан рушія"
+msgstr "Vie _moottorin tila"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:55
 msgid "Export Engine _Config"
-msgstr "Експорт _конфігурації рушія"
+msgstr "Vie moottorin a_setukset"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:61
 msgid "De_veloper Mode"
-msgstr "Режим _розробника"
+msgstr "Kehitt_äjätila"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:66
-#, fuzzy
-#| msgid "New Window"
 msgid "New _Window"
-msgstr "Нове вікно"
+msgstr "Uusi _ikkuna"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:72
 msgid "_New"
-msgstr "_Новий"
+msgstr "_Uusi"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:76
 msgid "_Open"
-msgstr "_Відкрити"
+msgstr "_Avaa"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:80
 msgid "_Save"
-msgstr "_Зберегти"
+msgstr "_Tallenna"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:84
 msgid "Save _As"
-msgstr "Зберегти як"
+msgstr "Tallenna _nimellä"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:90
 msgid "_Print"
-msgstr "_Друк"
+msgstr "T_ulosta"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:94
 msgid "_Import File"
-msgstr "_Імпортувати файл"
+msgstr "Tuo tie_dosto"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:98
 msgid "_Clipboard"
-msgstr "_Буфер обміну"
+msgstr "_Leikepöytä"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:100
 #: crates/rnote-ui/data/ui/contextmenu.ui:10
 msgid "_Copy"
-msgstr "_Копіювати"
+msgstr "_Kopioi"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:104
 #: crates/rnote-ui/data/ui/contextmenu.ui:14
 msgid "C_ut"
-msgstr "Вирізати"
+msgstr "_Leikkaa"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:108
 #: crates/rnote-ui/data/ui/contextmenu.ui:18
 msgid "_Paste"
-msgstr "_Вставити"
+msgstr "L_iitä"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:113
 msgid "_Export…"
-msgstr "_Експортувати…"
+msgstr "_Vie…"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:115
 msgid "Export _Document"
-msgstr "Експорт _документу"
+msgstr "Vie _asiakirja"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:119
 msgid "Export Document _Pages"
-msgstr "Експорт сторінок документа"
+msgstr "Vie asiakirjan _sivut"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:123
 msgid "Export _Selection"
-msgstr "Експортувати _вибране"
+msgstr "Vie _valinta"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:130
 msgid "Se_ttings"
-msgstr "На_лаштування"
+msgstr "_Asetukset"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:134
 msgid "_Keyboard Shortcuts"
-msgstr "_Гарячі клавіши"
+msgstr "_Pikanäppäimet"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:138
 msgid "_Donate 💝"
-msgstr "_Підтримати 💝"
+msgstr "_Lahjoita 💝"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:142
 msgid "A_bout Rnote"
-msgstr "П_ро Rnote"
+msgstr "_Tietoja - Rnote"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:173
 msgid "Sidebar on the Left Side"
-msgstr "Бічна панель з лівого боку"
+msgstr "Sivupalkki vasemalla puolella"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:182
 msgid "Sidebar on the Right Side"
-msgstr "Бічна панель з правого боку"
+msgstr "Sivupalkki oikealla puolella"
 
 #: crates/rnote-ui/data/ui/appmenu.ui:192
 #: crates/rnote-ui/data/ui/shortcuts.ui:56
 msgid "Toggle Fullscreen"
-msgstr "Повноекранний режим"
+msgstr "Koko näyttö päällä/pois"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:24
 msgid "_Snap Positions"
-msgstr "Прив'язка позицій"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:29
 msgid "_Pen Sounds"
-msgstr "Звуки _пера"
+msgstr "_Kynän äänet"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:34
 msgid "_Return to Origin Page"
-msgstr "_Повернутись до початкової сторінки"
+msgstr "_Palaa alkusivulle"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:38
 msgid "C_lear Document"
-msgstr "_Очистити документ"
+msgstr "_Tyhjennä asiakirja"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:44
 msgid "Show _Format Borders"
-msgstr "Показати межі _формату"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:49
 msgid "Show _Origin Indicator"
-msgstr "Показати початковий індикатор"
+msgstr "Näytä _alkusivun ilmaisin"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:54
 msgid "Draw With _Touch Input"
-msgstr "Малювати за допомогою _сенсорного введення"
+msgstr "Piirrä _kosketussyötteellä"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:59
 msgid "Block Pinch to _Zoom"
-msgstr "Заблокувати дотики сенсорної панелі для _масштабування"
+msgstr "Estä lähennys _nipistämällä"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:64
 msgid "Respect Borders When Pasting"
@@ -1139,165 +1118,155 @@ msgstr ""
 #: crates/rnote-ui/data/ui/shortcuts.ui:138
 #: crates/rnote-ui/data/ui/shortcuts.ui:144
 msgid "Zoom out"
-msgstr "Віддалити"
+msgstr "Loitonna"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:104
 msgid "Reset Zoom"
-msgstr "Скинути масштаб"
+msgstr "Palauta mittakaava"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:111
 #: crates/rnote-ui/data/ui/shortcuts.ui:114
 #: crates/rnote-ui/data/ui/shortcuts.ui:120
 #: crates/rnote-ui/data/ui/shortcuts.ui:126
 msgid "Zoom in"
-msgstr "Збільшити"
+msgstr "Lähennä"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:123
 msgid "Zoom to Page Width"
-msgstr "Масштабувати до ширини сторінки"
+msgstr "Lähennä sivun leveyteen"
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:138
 msgid ""
 "Remove Page.\n"
 "Available in Fixed-Size Document Layout."
 msgstr ""
-"Видалити сторінку.\n"
-"Доступно в форматі документа фіксованого розміру."
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:147
 msgid ""
 "Add Page.\n"
 "Available in Fixed-Size Document Layout."
 msgstr ""
-"Додати сторінку.\n"
-"Доступно в форматі документа фіксованого розміру."
 
 #: crates/rnote-ui/data/ui/canvasmenu.ui:156
 msgid ""
 "Resize Document to Fit Content.\n"
 "Available in Fixed-Size Document Layout."
 msgstr ""
-"Змінити розмір документа відповідно до вмісту.\n"
-"Доступно в форматі документа фіксованого розміру."
 
 #: crates/rnote-ui/data/ui/colorpicker.ui:23
 msgid "Stroke Color"
-msgstr "Колір обведення"
+msgstr "Vedon väri"
 
 #: crates/rnote-ui/data/ui/colorpicker.ui:30
 msgid "Fill Color"
-msgstr "Колір заливки"
+msgstr "Täyttöväri"
 
 #: crates/rnote-ui/data/ui/filerow.ui:61
 #: crates/rnote-ui/src/dialogs/import.rs:36
 msgid "Open"
-msgstr "Відкрити"
+msgstr "Avaa"
 
 #: crates/rnote-ui/data/ui/filerow.ui:65
 msgid "Open in Default App"
-msgstr "Відкрити в програмі за умовчанням"
+msgstr "Avaa oletussovelluksessa"
 
 #: crates/rnote-ui/data/ui/filerow.ui:69
 #: crates/rnote-ui/src/workspacebrowser/filerow/actions/rename.rs:91
 msgid "Rename"
-msgstr "Перейменувати"
+msgstr "Nimeä uudelleen"
 
 #: crates/rnote-ui/data/ui/filerow.ui:73
 msgid "Move to Trash"
-msgstr "Перемістити в Кошик"
+msgstr "Siirrä roskakoriin"
 
 #: crates/rnote-ui/data/ui/filerow.ui:77
 msgid "Duplicate"
-msgstr "Дублювати"
+msgstr "Monista"
 
 #: crates/rnote-ui/data/ui/mainheader.ui:23
 #: crates/rnote-ui/src/canvas/mod.rs:594
 msgid "Draft"
-msgstr "Чернетка"
+msgstr "Luonnos"
 
 #: crates/rnote-ui/data/ui/mainheader.ui:40
 #: crates/rnote-ui/data/ui/mainheader.ui:74
 msgid "Show/Hide Sidebar"
-msgstr "Показати/приховати бічну панель"
+msgstr "Näytä/piilota sivupalkki"
 
 #: crates/rnote-ui/data/ui/mainheader.ui:47
 #: crates/rnote-ui/data/ui/shortcuts.ui:26
 msgid "New Tab"
-msgstr "Нова вкладка"
+msgstr "Uusi välilehti"
 
 #: crates/rnote-ui/data/ui/mainheader.ui:54
 msgid "Focus Mode"
-msgstr "Режим фокусування"
+msgstr "Keskittymistila"
 
 #: crates/rnote-ui/data/ui/mainheader.ui:66
 #: crates/rnote-ui/data/ui/shortcuts.ui:167
 msgid "Save Document"
-msgstr "Зберегти документ"
+msgstr "Tallenna asiakirja"
 
 #: crates/rnote-ui/data/ui/overlays.ui:98
 msgid "Move _Left"
-msgstr "Перемістити вліво"
+msgstr "Siirrä _vasemmalle"
 
 #: crates/rnote-ui/data/ui/overlays.ui:102
 msgid "Move _Right"
-msgstr "Перемістити вправо"
+msgstr "Siirrä _oikealle"
 
 #: crates/rnote-ui/data/ui/overlays.ui:108
 msgid "_Close"
-msgstr "_Закрити"
+msgstr "_Sulje"
 
 #: crates/rnote-ui/data/ui/penshortcutrow.ui:11
 msgid "Temporary"
-msgstr "Тимчасовий"
+msgstr "Väliaikainen"
 
 #: crates/rnote-ui/data/ui/penshortcutrow.ui:12
 msgid "Permanent"
-msgstr "Перманентний"
+msgstr "Pysyvä"
 
 #: crates/rnote-ui/data/ui/penshortcutrow.ui:13
 msgid "Toggle"
-msgstr "Перемикач"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/penshortcutrow.ui:14
-#, fuzzy
-#| msgid "Enabled"
 msgid "Disabled"
-msgstr "Увімкнено"
+msgstr "Ei käytössä"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:41
 #: crates/rnote-ui/data/ui/shortcuts.ui:11
 msgid "General"
-msgstr "Загальні"
+msgstr "Yleiset"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:44
 msgid "Autosave"
-msgstr "Автозбереження"
+msgstr "Automaattinen tallennus"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:45
 msgid "Enable or disable autosave"
-msgstr "Увімкнути або вимкнути автозбереження"
+msgstr "Käytä tai poista käytöstä automaattinen tallennus"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:50
 msgid "Autosave Interval (secs)"
-msgstr "Інтервал автозбереження (сек.)"
+msgstr "Automaattisen tallennuksen aikaväli (s)"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:51
 msgid "Set the autosave interval in seconds"
-msgstr "Встановити інтервал автозбереження в секундах"
+msgstr "Aseta automaattisen tallennuksen aikaväli sekunneissa"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:58
 msgid "Show Scrollbars"
-msgstr "Показуваим смужки гортання"
+msgstr "Näytä vierityspalkit"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:59
 msgid "Set whether the scrollbars on the canvas are shown"
-msgstr "Встановити, чи відображати смужки гортання на полотні"
+msgstr "Näytetäänkö vierityspalkit piirtoalueella"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:64
-#, fuzzy
-#| msgid "Optimize for Printing"
 msgid "Optimize for E-Paper Displays"
-msgstr "Оптимізувати для друку"
+msgstr "Optimoi E-paperinäytöille"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:65
 msgid ""
@@ -1307,7 +1276,7 @@ msgstr ""
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:71
 msgid "Inertial Touch Scrolling"
-msgstr "Інерційна сенсорна прокрутка"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:72
 msgid ""
@@ -1315,45 +1284,42 @@ msgid ""
 "An application restart is required when this option\n"
 "gets disabled."
 msgstr ""
-"Дозволяє вказати, чи буде прокрутка на полотні інерційною.\n"
-"Якщо цей параметр вимкнено,\n"
-"потрібно перезапустити застосунок."
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:79
 msgid "Regular Cursor"
-msgstr "Звичайний курсор"
+msgstr "Tavallinen kohdistin"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:80
 msgid "Set the regular cursor"
-msgstr "Встановити звичайний курсор"
+msgstr "Aseta tavallinen kohdistin"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:102
 msgid "Show Drawing Cursor"
-msgstr "Курсор для малювання"
+msgstr "Näytä piirrustuskohdistin"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:103
 msgid "Set whether the drawing cursor is visible"
-msgstr "Встановити, чи буде видимим курсор малювання"
+msgstr "Onko piirrustuskohdistin näkyvissä"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:109
 msgid "Drawing Cursor"
-msgstr "Курсор для малювання"
+msgstr "Piirrustuskohdistin"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:110
 msgid "Set the drawing cursor"
-msgstr "Встановити курсор для малювання"
+msgstr "Aseta piirrustuskohdistin"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:135
 msgid "Page Format"
-msgstr "Формат сторінки"
+msgstr "Sivun muoto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:138
 msgid "Format"
-msgstr "Формат"
+msgstr "Muoto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:139
 msgid "Choose a format"
-msgstr "Виберіть формат"
+msgstr "Valitse muoto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:143
 msgid "A6"
@@ -1377,416 +1343,416 @@ msgstr "A2"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:148
 msgid "US letter"
-msgstr "Лист США"
+msgstr "US letter"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:149
 msgid "US legal"
-msgstr "США legal"
+msgstr "US legal"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:150
 msgid "Custom"
-msgstr "Власний"
+msgstr "Mukautettu"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:158
 msgid "Orientation"
-msgstr "Орієнтація"
+msgstr "Suunta"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:159
 msgid "Set the format orientation"
-msgstr "Встановити орієнтацію формату"
+msgstr "Aseta muodon suunta"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:171
 msgid "Portrait"
-msgstr "Портрет"
+msgstr "Pysty"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:177
 msgid "Landscape"
-msgstr "Пейзаж"
+msgstr "Vaaka"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:187
 msgid "Width"
-msgstr "Ширина"
+msgstr "Leveys"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:188
 msgid "Set the format width"
-msgstr "Встановити ширину формату"
+msgstr "Aseta muodon leveys"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:204
 msgid "Height"
-msgstr "Висота"
+msgstr "Korkeus"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:205
 msgid "Set the format height"
-msgstr "Встановити висоту формату"
+msgstr "Aseta muodon korkeus"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:221
 msgid "Dpi"
-msgstr "Dpi"
+msgstr "DPI"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:222
 msgid "Set the Dpi (dots per inch). Defaults to 96."
-msgstr "Встановити DPI (точок на дюйм). Типово: 96."
+msgstr "Aseta DPI (pistettä per tuuma). Oletus on 96."
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:232
 msgid "Revert"
-msgstr "Повернути"
+msgstr "Palauta oletukset"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:254
 #: crates/rnote-ui/data/ui/shortcuts.ui:158
 #: crates/rnote-ui/src/dialogs/mod.rs:631
 msgid "Document"
-msgstr "Документ"
+msgstr "Asiakirja"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:257
 msgid "Document Layout"
-msgstr "Компонування документа"
+msgstr "Asiakirjan asettelu"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:261
 msgid "Fixed Size"
-msgstr "Фіксований розмір"
+msgstr "Kiinteä koko"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:262
 msgid "Continuous Vertical"
-msgstr "Безперервна вертикаль"
+msgstr "Jatkuva pystysuorassa"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:263
 msgid "Semi Infinite"
-msgstr "Напівнескінченний"
+msgstr "Melkein loputon"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:264
 msgid "Infinite"
-msgstr "Нескінченний"
+msgstr "Loputon"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:272
 msgid "Format Border Color"
-msgstr "Формат кольору рамки"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:273
 msgid "Set the format border color"
-msgstr "Встановити формат кольору рамки"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:294
 msgid "Set the background color"
-msgstr "Встановити колір фону"
+msgstr "Aseta taustaväri"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:314
 msgid "Pattern"
-msgstr "Шаблон"
+msgstr "Kuvio"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:315
 msgid "Choose a background pattern"
-msgstr "Виберіть шаблон фону"
+msgstr "Valitse taustakuvio"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:319
 msgid "None"
-msgstr "Жодного"
+msgstr "Ei mitään"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:320
 msgid "Lines"
-msgstr "Лінії"
+msgstr "Viivat"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:321
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:429
 msgid "Grid"
-msgstr "Сітка"
+msgstr "Ruudukko"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:323
 msgid "Isometric Grid"
-msgstr "Ізометрична сітка"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:324
 msgid "Isometric Dots"
-msgstr "Ізометричні точки"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:332
 msgid "Pattern Color"
-msgstr "Колір візерунка"
+msgstr "Kuvion väri"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:333
 msgid "Set the background pattern color"
-msgstr "Встановити колір фонового візерунка"
+msgstr "Aseta taustakuvion väri"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:353
 msgid "Pattern Width"
-msgstr "Ширина візерунка"
+msgstr "Kuvion leveys"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:354
 msgid "Set the background pattern width"
-msgstr "Встановити ширину візерунка фону"
+msgstr "Aseta taustakuvion leveys"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:370
 msgid "Pattern Height"
-msgstr "Висота шаблону"
+msgstr "Kuvion korkeus"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:371
 msgid "Set the background pattern height"
-msgstr "Встановити висоту фонового шаблону"
+msgstr "Aseta taustakuvion korkeus"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:387
 msgid "Invert Color Brightness"
-msgstr "Інвертувати яскравість кольорів"
+msgstr "Käänteinen värin kirkkaus"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:388
 msgid "Invert the brightness of all background pattern colors"
-msgstr "Інвертувати яскравість усіх кольорів фонового візерунка"
+msgstr ""
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:392
 msgid "Invert"
-msgstr "Інвертувати"
+msgstr "Käänteinen"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:402
 msgid "Button Shortcuts"
-msgstr "Гарячі клавіші"
+msgstr "Painikkeiden pikanäppäimet"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:405
 msgid "Stylus Primary Button Action"
-msgstr "Дія основної кнопки стилуса"
+msgstr "Stylus-kynän ensisijaisen painikkeen toiminto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:406
 msgid ""
 "Set the action for the\n"
 "primary stylus button"
 msgstr ""
-"Установіть дію для\n"
-"основної кнопки стилуса"
+"Aseta toiminto stylus-\n"
+"kynän ensisijaiselle painikkeelle"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:418
 msgid "Stylus Secondary Button Action"
-msgstr "Дія додаткової кнопки стилуса"
+msgstr "Stylus-kynän toissijaisen painikkeen toiminto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:419
 msgid ""
 "Set the action for the\n"
 "secondary stylus button"
 msgstr ""
-"Установіть дію для\n"
-"додаткової кнопки стилуса"
+"Aseta toiminto stylus-\n"
+"kynän toissijaiselle painikkeelle"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:431
 msgid "Mouse Secondary Button Action"
-msgstr "Дія додаткової кнопки миші"
+msgstr "Hiiren toissijaisen painikkeen toiminto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:432
 msgid ""
 "Set the action for the\n"
 "secondary mouse button"
 msgstr ""
-"Установіть дію для\n"
-"додаткової кнопки миші"
+"Aseta toiminto hiiren\n"
+"toissijaiselle painikkeelle"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:444
 msgid "Touch Two-Finger Long-Press Action"
-msgstr "Тривалий дотик двома пальцями"
+msgstr "Kosketuksen kahden sormen pitkän painalluksen toiminto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:445
 msgid ""
 "Set the action for the touch\n"
 "two-finger long-press gesture"
 msgstr ""
-"Налаштувати дію для жесту тривалого\n"
-"дотику двома пальцями"
+"Aseta toiminto kosketuksen\n"
+"kahden sormen pitkän painalluksen eleelle"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:457
 msgid "Keyboard Ctrl-Space Action"
-msgstr "Дія для клавіатурного скорочення Ctrl-Пробіл"
+msgstr "Näppäimistön Ctrl-välilyönnin toiminto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:458
 msgid ""
 "Set the action for the keyboard\n"
 "Ctrl plus Space shortcut"
 msgstr ""
-"Встановити дію для клавіатурного скорочення\n"
-"Ctrl + Пробіл"
+"Aseta toiminto näppäimistön\n"
+"Ctrl:n ja välilyönnin pikanäppäimelle"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:470
 msgid "Drawing Pad Button 1 Action"
-msgstr "Блок малювання - Кнопка дії 1"
+msgstr "Piirtoalustan painikkeen 1 toiminto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:471
 msgid ""
 "Set the action for button 1\n"
 "on a drawing pad"
 msgstr ""
-"Встановіть дію для кнопки 1\n"
-"на планшеті для малювання"
+"Aseta toiminto\n"
+"piirrosalustan painikkeelle 1"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:483
 msgid "Drawing Pad Button 2 Action"
-msgstr "Блок малювання - Кнопка дії 2"
+msgstr "Piirtoalustan painikkeen 2 toiminto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:484
 msgid ""
 "Set the action for button 2\n"
 "on a drawing pad"
 msgstr ""
-"Встановіть дію для кнопки 2\n"
-"на планшеті для малювання"
+"Aseta toiminto\n"
+"piirrosalustan painikkeelle 2"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:496
 msgid "Drawing Pad Button 3 Action"
-msgstr "Блок малювання - Кнопка дії 3"
+msgstr "Piirtoalustan painikkeen 3 toiminto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:497
 msgid ""
 "Set the action for button 3\n"
 "on a drawing pad"
 msgstr ""
-"Встановіть дію для кнопки 3\n"
-"на планшеті для малювання"
+"Aseta toiminto\n"
+"piirrosalustan painikkeelle 3"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:509
 msgid "Drawing Pad Button 4 Action"
-msgstr "Блок малювання - Кнопка дії 4"
+msgstr "Piirtoalustan painikkeen 4 toiminto"
 
 #: crates/rnote-ui/data/ui/settingspanel.ui:510
 msgid ""
 "Set the action for button 4\n"
 "on a drawing pad"
 msgstr ""
-"Встановіть дію для кнопки 4\n"
-"на планшеті для малювання"
+"Aseta toiminto\n"
+"piirrosalustan painikkeelle 4"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:14
 msgid "Show Keyboard Shortcuts"
-msgstr "Показати комбінації клавіш"
+msgstr "Näytä näppäimistön pikanäppäimet"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:32
 msgid "Close the Active Tab"
-msgstr "Закрити активну вкладку"
+msgstr "Sulje aktiivinen välilehti"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:38
 msgid "Quit the Application"
-msgstr "Вийти із додатку"
+msgstr "Lopeta sovellus"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:44
 msgid "Open the Canvas-Menu"
-msgstr "Відкрити меню полотна"
+msgstr "Avaa piirtoaluevalikko"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:50
 msgid "Open the App-Menu"
-msgstr "Відкрити меню застосунку"
+msgstr "Avaa sovellusvalikko"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:64
 msgid "Navigation"
-msgstr "Навігація"
+msgstr "Liikkuminen"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:67
 msgid "Switch to the 'Brush'"
-msgstr "Переключитися на «Пензель»"
+msgstr "Vaihda kohtaan \"Sivellin\""
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:73
 msgid "Switch to the 'Shaper'"
-msgstr "Переключитися на \"Створення фігур\""
+msgstr "Vaihda kohtaan \"Muotoillin\""
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:79
 msgid "Switch to the 'Typewriter'"
-msgstr "Переключитися на \"Друкарську машинку\""
+msgstr "Vaihda kohtaan \"Kirjoituskone\""
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:85
 msgid "Switch to the 'Eraser'"
-msgstr "Переключитися на «Гумка»"
+msgstr "Vaihda kohtaan \"Pyyhekumi\""
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:91
 msgid "Switch to the 'Selector'"
-msgstr "Переключатися на “Виділення”"
+msgstr "Vaihda kohtaan \"Valitsin\""
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:97
 msgid "Switch to the 'Tools'"
-msgstr "Переключитися на «Інструменти\""
+msgstr "Vaihda kohtaan \"Työkalut\""
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:105
 msgid "View"
-msgstr "Переглянути"
+msgstr "Näkymä"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:109
 msgid "Alt + Drag"
-msgstr "Alt + перетягнути"
+msgstr "Alt + Raahaus"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:150
 msgid "Zoom in/out"
-msgstr "Збільшити/зменшити"
+msgstr "Lähennä/loitonna"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:151
 msgid "Alt + Shift + Drag"
-msgstr "Alt + Shift + перетягування"
+msgstr "Alt + Shift + Raahaus"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:161
 msgid "Open Document"
-msgstr "Відкрити документ"
+msgstr "Avaa asiakirja"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:173
 #: crates/rnote-ui/src/dialogs/export.rs:40
 msgid "Save Document As"
-msgstr "Зберегти документ як"
+msgstr "Tallenna asiakirja nimellä"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:179
 msgid "Snap Positions"
-msgstr "Прив'язка позицій"
+msgstr "Napsauta sijainnit"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:191
 msgid "Add Page (When in Fixed-Size Layout)"
-msgstr "Додати сторінку (коли у форматі фіксованого розміру)"
+msgstr "Lisää sivu (kun kiinteäkokoinen asettelu)"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:197
 msgid "Remove Last Page (When in Fixed-Size Layout)"
-msgstr "Видалити останню сторінку (коли у форматі фіксованого розміру)"
+msgstr "Poista viimeinen sivu (kun kiinteäkokoinen asettelu)"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:203
 msgid "Print Document"
-msgstr "Друкувати документ"
+msgstr "Tulosta asiakirjoja"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:209
 #: crates/rnote-ui/src/dialogs/import.rs:92
 msgid "Import File"
-msgstr "Імпортувати файл"
+msgstr "Tuo tiedosto"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:215
 msgid "Drawing"
-msgstr "Малюнок"
+msgstr "Piirrustus"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:218
 msgid "Copy to Clipboard"
-msgstr "Скопіювати в буфер обміну"
+msgstr "Kopioi leikepöydälle"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:224
 msgid "Cut to Clipboard"
-msgstr "Вирізати в буфер обміну"
+msgstr "Leikkaa leikepöydälle"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:230
 msgid "Paste Clipboard"
-msgstr "Вставити із буферу обміну"
+msgstr "Liitä leikepöydältä"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:242
 msgid "Undo"
-msgstr "Відмінити"
+msgstr "Kumoa"
 
 #: crates/rnote-ui/data/ui/shortcuts.ui:248
 msgid "Redo"
-msgstr "Повторити"
+msgstr "Tee uudelleen"
 
 #: crates/rnote-ui/data/ui/sidebar.ui:50
 msgid "Workspace"
-msgstr "Робоча область"
+msgstr "Työtila"
 
 #: crates/rnote-ui/data/ui/sidebar.ui:61
 msgid "Settings"
-msgstr "Налаштування"
+msgstr "Asetukset"
 
 #: crates/rnote-ui/data/ui/strokecontentpreview.ui:79
 msgid "Page"
-msgstr "Сторінка"
+msgstr "Sivu"
 
 #: crates/rnote-ui/data/ui/workspacebrowser.ui:64
 msgid "Move Directory up"
-msgstr "Перемістити каталог вгору"
+msgstr "Siirry kansio ylös"
 
 #: crates/rnote-ui/data/ui/workspacebrowser.ui:81
 msgid "Workspace Directory Actions"
-msgstr "Дії каталогу робочої області"
+msgstr "Työtilan kansion toiminnot"
 
 #: crates/rnote-ui/data/ui/workspacebrowser.ui:163
 msgid "Create new Folder"
-msgstr "Створити нову папку"
+msgstr "Luo uusi kansio"
 
 #: crates/rnote-ui/src/appwindow/actions.rs:573
 #: crates/rnote-ui/src/appwindow/imp.rs:313
@@ -1795,15 +1761,15 @@ msgstr "Створити нову папку"
 #: crates/rnote-ui/src/dialogs/mod.rs:248
 #: crates/rnote-ui/src/dialogs/mod.rs:401
 msgid "Saving document failed"
-msgstr "Не вдалося зберегти документ"
+msgstr "Asiakirjan tallentaminen epäonnistui"
 
 #: crates/rnote-ui/src/appwindow/actions.rs:636
 msgid "Printing document failed"
-msgstr "Не вдалося надрукувати документ"
+msgstr "Asiakirjan tulostaminen epäonnistui"
 
 #: crates/rnote-ui/src/appwindow/actions.rs:672
 msgid "Exporting selection failed, nothing selected"
-msgstr "Не вдалося експортувати вибране, нічого не вибрано"
+msgstr "Valinnan vienti epäonnistui, mitään ei ole valittu"
 
 #: crates/rnote-ui/src/appwindow/imp.rs:268
 msgid "Saves are in progress, waiting before closing.."
@@ -1811,72 +1777,68 @@ msgstr ""
 
 #: crates/rnote-ui/src/appwindow/imp.rs:336
 msgid "Button 1"
-msgstr "Кнопка 1"
+msgstr "Painike 1"
 
 #: crates/rnote-ui/src/appwindow/imp.rs:343
 msgid "Button 2"
-msgstr "Кнопка 2"
+msgstr "Painike 2"
 
 #: crates/rnote-ui/src/appwindow/imp.rs:350
 msgid "Button 3"
-msgstr "Кнопка 3"
+msgstr "Painike 3"
 
 #: crates/rnote-ui/src/appwindow/imp.rs:357
 msgid "Button 4"
-msgstr "Кнопка 4"
+msgstr "Painike 4"
 
 #: crates/rnote-ui/src/appwindow/mod.rs:141
 msgid ""
 "Settings schema is not installed. App settings could not be loaded and won't "
 "be saved."
 msgstr ""
-"Схема налаштувань не встановлена. Збереження та завантаження налаштувань не "
-"можливе."
+"Asetusten skeemaa ei ole asennettu. Sovelluksen asetuksia ei voitu ladata, "
+"eikä asetuksia voi tallentaa."
 
 #: crates/rnote-ui/src/appwindow/mod.rs:520
 msgid "Opening file failed"
-msgstr "Не вдалося відкрити файл"
+msgstr "Tiedoston avaaminen epäonnistui"
 
 #: crates/rnote-ui/src/canvas/mod.rs:858 crates/rnote-ui/src/dialogs/mod.rs:195
 #: crates/rnote-ui/src/dialogs/mod.rs:331
 msgid "- invalid file name -"
-msgstr "- недійсна назва файлу -"
+msgstr "- virheellinen tiedostonimi -"
 
 #: crates/rnote-ui/src/canvas/mod.rs:871
 msgid "- invalid folder path -"
-msgstr "- недійсний шлях до теки -"
+msgstr "- virheellinen kansion polku -"
 
 #: crates/rnote-ui/src/canvas/mod.rs:895
 msgid "Opened file was modified on disk"
-msgstr "Відкритий файл змінено на диску"
+msgstr "Avattua tiedostoa muokattiin levyllä"
 
 #: crates/rnote-ui/src/canvas/mod.rs:896
 msgid "Reload"
-msgstr "Перезавантажити"
+msgstr "Lataa uudelleen"
 
 #: crates/rnote-ui/src/canvas/mod.rs:903
 msgid "Reloading .rnote file from disk failed"
-msgstr "Не вдалося перезавантажити файл .rnote з диска"
+msgstr ".rnote-tiedoston lataaminen uudelleen levyltä epäonnistui"
 
 #: crates/rnote-ui/src/canvas/mod.rs:969
-#, fuzzy
-#| msgid "Opened file was renamed on disk"
 msgid "Opened file was renamed or moved."
-msgstr "Відкритий файл було перейменовано на диску"
+msgstr "Avattu tiedosto nimettiin uudelleen tai siirrettiin."
 
 #: crates/rnote-ui/src/canvas/mod.rs:983
-#, fuzzy
-#| msgid "Opened file was renamed on disk"
 msgid "Opened file was removed."
-msgstr "Відкритий файл було перейменовано на диску"
+msgstr "Avattu tiedosto poistettiin."
 
 #: crates/rnote-ui/src/canvas/mod.rs:1169
 msgid "Inserting file failed"
-msgstr "Не вдалося вставити файл"
+msgstr "Tiedoston lisääminen epäonnistui"
 
 #: crates/rnote-ui/src/canvas/mod.rs:1179
 msgid "Inserting text failed"
-msgstr "Не вдалося вставити текст"
+msgstr "Tekstin lisääminen epäonnistui"
 
 #: crates/rnote-ui/src/dialogs/export.rs:33
 #: crates/rnote-ui/src/dialogs/import.rs:28
@@ -1885,98 +1847,98 @@ msgstr ".rnote"
 
 #: crates/rnote-ui/src/dialogs/export.rs:66
 msgid "Saved document successfully"
-msgstr "Документ успішно збережено"
+msgstr "Asiakirja tallennettu"
 
 #: crates/rnote-ui/src/dialogs/export.rs:243
 #: crates/rnote-ui/src/dialogs/export.rs:256
 #: crates/rnote-ui/src/dialogs/export.rs:586
 #: crates/rnote-ui/src/dialogs/export.rs:882
 msgid "Exporting document failed"
-msgstr "Не вдалося експортувати документ"
+msgstr "Asiakirjan vieminen epäonnistui"
 
 #: crates/rnote-ui/src/dialogs/export.rs:247
 msgid "Exported document successfully"
-msgstr "Документ успішно експортовано"
+msgstr "Asiakirja vietiin onnistuneesti"
 
 #: crates/rnote-ui/src/dialogs/export.rs:248
 #: crates/rnote-ui/src/dialogs/export.rs:582
 #: crates/rnote-ui/src/dialogs/export.rs:874
 msgid "View in file manager"
-msgstr "Переглянути в файловому менеджері"
+msgstr "Näytä tiedostonhallinnassa"
 
 #: crates/rnote-ui/src/dialogs/export.rs:262
 #: crates/rnote-ui/src/dialogs/export.rs:592
 #: crates/rnote-ui/src/dialogs/export.rs:888
 msgid "Failed to open the file in the file manager"
-msgstr "Не вдалося відкрити файл у файловому менеджері"
+msgstr "Tiedoston avaaminen tiedostonhallinnassa epäonnistui"
 
 #: crates/rnote-ui/src/dialogs/export.rs:272
 msgid "Exporting document failed, no file selected"
-msgstr "Не вдалося експортувати документ, файл не вибрано"
+msgstr "Asiakirjan vienti epäonnistui. Tiedostoa ei ole valittu"
 
 #: crates/rnote-ui/src/dialogs/export.rs:287
 #: crates/rnote-ui/src/dialogs/export.rs:617
 #: crates/rnote-ui/src/dialogs/export.rs:935
 #: crates/rnote-ui/src/dialogs/mod.rs:504
 msgid "Select"
-msgstr "Вибрати"
+msgstr "Valitse"
 
 #: crates/rnote-ui/src/dialogs/export.rs:577
 msgid "Exporting document pages failed"
-msgstr "Не вдалося експортувати сторінки документа"
+msgstr "Asiakirjan sivujen vienti epäonnistui"
 
 #: crates/rnote-ui/src/dialogs/export.rs:581
 msgid "Exported document pages successfully"
-msgstr "Сторінки документів успішно експортовано"
+msgstr "Asiakirjan sivut vietiin onnistuneesti"
 
 #: crates/rnote-ui/src/dialogs/export.rs:601
 msgid "Exporting document pages failed, no directory selected"
-msgstr "Не вдалося експортувати сторінки документа, теку не вибрано"
+msgstr "Asiakirjan sivujen vienti epäonnistui. Kansiota ei ole valittu"
 
 #: crates/rnote-ui/src/dialogs/export.rs:859
 msgid "Exporting selection failed, no file selected"
-msgstr "Не вдалося експортувати вибране, файл не вибрано"
+msgstr "Valinnan vienti epäonnistui. Tiedostoa ei ole valittu"
 
 #: crates/rnote-ui/src/dialogs/export.rs:869
 msgid "Exporting selection failed"
-msgstr "Не вдалося експортувати вибране"
+msgstr "Valinnan vienti epäonnistui"
 
 #: crates/rnote-ui/src/dialogs/export.rs:873
 msgid "Exported selection successfully"
-msgstr "Вибране успішно експортовано"
+msgstr "Valinta vietiin onnistuneesti"
 
 #: crates/rnote-ui/src/dialogs/export.rs:1011
 #: crates/rnote-ui/src/dialogs/export.rs:1074
 msgid "Json"
-msgstr "Json"
+msgstr "JSON"
 
 #: crates/rnote-ui/src/dialogs/export.rs:1023
 msgid "Export Engine State"
-msgstr "Експортувати стан рушія"
+msgstr "Vie moottorin tila"
 
 #: crates/rnote-ui/src/dialogs/export.rs:1042
 msgid "Exporting engine state failed"
-msgstr "Не вдалося експортувати стан рушія"
+msgstr "Moottorin tilan vienti epäonnistui"
 
 #: crates/rnote-ui/src/dialogs/export.rs:1046
 msgid "Exported engine state successfully"
-msgstr "Стан рушія успішно експортовано"
+msgstr "Moottorin tila vietiin onnistuneesti"
 
 #: crates/rnote-ui/src/dialogs/export.rs:1086
 msgid "Export Engine Config"
-msgstr "Експорт конфігурації рушія"
+msgstr "Vie moottorin asetukset"
 
 #: crates/rnote-ui/src/dialogs/export.rs:1105
 msgid "Exporting engine config failed"
-msgstr "Не вдалося експортувати конфігурацію рушія"
+msgstr "Moottorin asetusten vienti epäonnistui"
 
 #: crates/rnote-ui/src/dialogs/export.rs:1109
 msgid "Exported engine config successfully"
-msgstr "Конфігурацію рушія успішно експортовано"
+msgstr "Moottorin asetukset vietiin onnistuneesti"
 
 #: crates/rnote-ui/src/dialogs/import.rs:34
 msgid "Open File"
-msgstr "Відкрити файл"
+msgstr "Avaa tiedosto"
 
 #: crates/rnote-ui/src/dialogs/import.rs:86
 msgid "Jpg, Pdf, Png, Svg, Xopp, Txt"
@@ -1984,503 +1946,486 @@ msgstr "Jpg, Pdf, Png, Svg, Xopp, Txt"
 
 #: crates/rnote-ui/src/dialogs/import.rs:239
 msgid "- no file name -"
-msgstr "- немає імені файлу -"
+msgstr "- ei tiedostonimeä -"
 
 #: crates/rnote-ui/src/dialogs/import.rs:244
 msgid "- no title -"
-msgstr "- без назви -"
+msgstr "- ei nimeä -"
 
 #: crates/rnote-ui/src/dialogs/import.rs:247
 msgid "- no author -"
-msgstr "- немає автора -"
+msgstr "- ei tekijää -"
 
 #: crates/rnote-ui/src/dialogs/import.rs:251
 msgid "- no date -"
-msgstr "- без дати -"
+msgstr "- ei päiväystä -"
 
 #: crates/rnote-ui/src/dialogs/import.rs:258
 msgid "File name:"
-msgstr "Ім'я файлу:"
+msgstr "Tiedostonimi:"
 
 #: crates/rnote-ui/src/dialogs/import.rs:262
 msgid "Title:"
-msgstr "Назва:"
+msgstr "Nimi:"
 
 #: crates/rnote-ui/src/dialogs/import.rs:266
 msgid "Author:"
-msgstr "Автор:"
+msgstr "Tekijä:"
 
 #: crates/rnote-ui/src/dialogs/import.rs:270
 msgid "Modification date:"
-msgstr "Дата зміни:"
+msgstr "Muokkauspäivä:"
 
 #: crates/rnote-ui/src/dialogs/import.rs:274
 msgid "Pages:"
-msgstr "Сторінок:"
+msgstr "Sivuja:"
 
 #. TRANSLATORS: 'Name <email@domain.com>' or 'Name https://website.example'
 #: crates/rnote-ui/src/dialogs/mod.rs:40
 msgid "translator-credits"
-msgstr ""
-"Володимир Лісівка <vlisivka@gmail.com>, https://linux.org.ua\n"
-"Kefir2105\n"
-"<jonweblin2205@protonmail.com>\n"
-"diminDDL\n"
-"dimin21590@gmail.com\n"
-"volkov <volkovissocool@gmail.com>"
+msgstr "Jiri Grönroos <jiri.gronroos+l10n@iki.fi>"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:202
 #: crates/rnote-ui/src/dialogs/mod.rs:338
 msgid "- invalid save folder name -"
-msgstr "- не правильне ім'я теки для збереження -"
+msgstr "- virheellinen tallennuskansion nimi -"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:218
 #: crates/rnote-ui/src/dialogs/mod.rs:353
 msgid "The changes will be saved"
-msgstr "Зміни будуть збережені"
+msgstr "Muutokset tallennetaan"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:223
 #: crates/rnote-ui/src/dialogs/mod.rs:358
 msgid "A new file will be created"
-msgstr "Буде створено новий файл"
+msgstr "Uusi tiedosto luodaan"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:502
 msgid "Change Workspace Directory"
-msgstr "Змінити робочу теку"
+msgstr "Vaihda työtilan kansiota"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:618
 msgid "Band-Aid"
-msgstr "Пластир"
+msgstr "Laastari"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:619
 msgid "Bank"
-msgstr "Банк"
+msgstr "Pankki"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:620
 msgid "Bookmark"
-msgstr "Закладка"
+msgstr "Kirjanmerkki"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:621
 msgid "Book"
-msgstr "Книга"
+msgstr "Kirja"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:622
 msgid "Bread"
-msgstr "Хліб"
+msgstr "Leipä"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:623
 msgid "Calendar"
-msgstr "Календар"
+msgstr "Kalenteri"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:624
 msgid "Camera"
-msgstr "Камера"
+msgstr "Kamera"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:625
 msgctxt "as in computer chip"
 msgid "Chip"
-msgstr "Чіп"
+msgstr "Piiri"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:626
 msgid "Clock"
-msgstr "Годинник"
+msgstr "Kello"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:627
 msgid "Code"
-msgstr "Код"
+msgstr "Koodi"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:628
 msgid "Compose"
-msgstr "Скласти"
+msgstr "Kooste"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:629
 msgctxt "as in plant"
 msgid "Crop"
-msgstr "Врожай"
+msgstr "Viljelykasvi"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:630
 msgid "Dictionary"
-msgstr "Словник"
+msgstr "Sanasto"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:632
 msgid "Drinks"
-msgstr "Напої"
+msgstr "Juomat"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:633
 msgid "Flag"
-msgstr "Прапор"
+msgstr "Lippu"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:634
 msgid "Folder"
-msgstr "Папка"
+msgstr "Kansio"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:635
 msgid "Footprints"
-msgstr "Сліди"
+msgstr "Jalanjäljet"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:636
 msgid "Gamepad"
-msgstr "Геймпад"
+msgstr "Peliohjain"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:637
 msgid "Gear"
-msgstr "Шестірня"
+msgstr "Ratas"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:638
 msgid "Globe"
-msgstr "Глобус"
+msgstr "Maapallo"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:639
 msgid "Hammer"
-msgstr "Молоток"
+msgstr "Vasara"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:640
 msgid "Heart"
-msgstr "Серце"
+msgstr "Sydän"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:641
 msgid "Hourglass"
-msgstr "Пісочний годинник"
+msgstr "Tiimalasi"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:642
 msgid "Key"
-msgstr "Ключ"
+msgstr "Avain"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:643
 msgid "Language"
-msgstr "Мова"
+msgstr "Kieli"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:644
 msgid "Library"
-msgstr "Бібліотека"
+msgstr "Kirjasto"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:645
 msgid "Lightbulb"
-msgstr "Лампочка"
+msgstr "Lamppu"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:646
 msgid "Mathematics"
-msgstr "Математика"
+msgstr "Matematiikka"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:647
 msgid "Meeting"
-msgstr "Зустріч"
+msgstr "Tapaaminen"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:648
 msgid "Money"
-msgstr "Гроші"
+msgstr "Raha"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:649
 msgid "Musical Note"
-msgstr "Музична нота"
+msgstr "Nuotti"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:650
 msgid "Nature"
-msgstr "Природа"
+msgstr "Luonto"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:651
 msgid "Open Book"
-msgstr "Відкрита книга"
+msgstr "Avoin kirja"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:652
 msgid "Paintbrush"
-msgstr "Пензлик"
+msgstr "Sivellin"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:653
 msgid "Pencil and Paper"
-msgstr "Олівець і папір"
+msgstr "Kynä ja paperi"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:654
 msgid "People"
-msgstr "Люди"
+msgstr "Ihmiset"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:655
 msgid "Person"
-msgstr "Особа"
+msgstr "Hahmo"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:656
 msgid "Projector"
-msgstr "Проєктор"
+msgstr "Projektori"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:657
 msgid "Science"
-msgstr "Наука"
+msgstr "Tiede"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:658
 msgid "Scratchpad"
-msgstr "Блокнот"
+msgstr "Piirtolehtiö"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:659
 msgid "Shapes"
-msgstr "Фігури"
+msgstr "Muodot"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:660
 msgid "Shopping"
-msgstr "Шопінг"
+msgstr "Ostokset"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:661
 msgid "Speech Bubble"
-msgstr "Мовна бульбашка"
+msgstr "Puhekupla"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:662
 msgid "Speedometer"
-msgstr "Спідометр"
+msgstr "Nopeusmittari"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:663
 msgid "Star"
-msgstr "Зірка"
+msgstr "Tähti"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:665
 msgctxt "as in terminal software"
 msgid "Terminal"
-msgstr "Термінал"
+msgstr "Pääte"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:667
 msgid "Text"
-msgstr "Текст"
+msgstr "Teksti"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:668
 msgid "Travel"
-msgstr "Подорожі"
+msgstr "Matkustus"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:669
 msgid "Weather"
-msgstr "Погода"
+msgstr "Sää"
 
 #: crates/rnote-ui/src/dialogs/mod.rs:670
 msgid "Weight"
-msgstr "Вага"
+msgstr "Paino"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:387
 msgid "Miscellaneous"
-msgstr "Різне"
+msgstr "Sekalaiset"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:396
 msgid "Coordinate Systems"
-msgstr "Системи координат"
+msgstr "Koordinaattijärjestelmät"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:404
 msgid "Ellipses"
-msgstr "Еліпси"
+msgstr "Ellipsit"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:411
 msgid "Curves & Paths"
-msgstr "Криві та шляхи"
+msgstr "Käyrät ja polut"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:426
 msgid "Arrow"
-msgstr "Стріла"
+msgstr "Nuoli"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:427
 msgid "Line"
-msgstr "Лінія"
+msgstr "Viiva"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:428
 msgid "Rectangle"
-msgstr "Прямокутник"
+msgstr "Suorakulmio"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:430
 msgid "2D coordinate system"
-msgstr "2D система координат"
+msgstr "2D-koordinaattijärjestelmä"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:431
 msgid "3D coordinate system"
-msgstr "3D система координат"
+msgstr "3D-koordinaattijärjestelmä"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:432
 msgid "2D single quadrant coordinate system"
-msgstr "Єдина 2D квадрантна система координат"
+msgstr ""
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:433
 msgid "Ellipse"
-msgstr "Еліпс"
+msgstr "Ellipsi"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:434
 msgid "Ellipse with foci"
-msgstr "Еліпс з фокусами"
+msgstr "Ellipsi kohdistimilla"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:435
 msgid "Quadratic bezier curve"
-msgstr "Квадратична крива Безьє"
+msgstr "Neliöllinen Bézier-käyrä"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:436
 msgid "Cubic bezier curve"
-msgstr "Кубічна крива Безьє"
+msgstr "Kuutiollinen Bézier-käyrä"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:437
 msgid "Polyline"
-msgstr "Ломана лінія"
+msgstr "Murtoviiva"
 
 #: crates/rnote-ui/src/penssidebar/shaperpage.rs:438
 msgid "Polygon"
-msgstr "Багатокутник"
+msgstr "Monikulmio"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:571
 msgid "Application restart is required"
-msgstr "Потрібно перезапустити застосунок"
+msgstr "Sovellus on käynnistettävä uudelleen"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:887
 msgctxt "a cursor type"
 msgid "Crosshair (Small)"
-msgstr "Перехрестя (Маленьке)"
+msgstr "Tähtäin (pieni)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:888
 msgctxt "a cursor type"
 msgid "Crosshair (Medium)"
-msgstr "Перехрестя (Середнє)"
+msgstr "Tähtäin (tavallinen)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:889
 msgctxt "a cursor type"
 msgid "Crosshair (Large)"
-msgstr "Перехрестя (Велике)"
+msgstr "Tähtäin (suuri)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:890
 msgctxt "a cursor type"
 msgid "Dot (Small)"
-msgstr "Крапка (Маленька)"
+msgstr "Piste (pieni)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:891
 msgctxt "a cursor type"
 msgid "Dot (Medium)"
-msgstr "Крапка (Середня)"
+msgstr "Piste (tavallinen)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:892
 msgctxt "a cursor type"
 msgid "Dot (Large)"
-msgstr "Крапка (Велика)"
+msgstr "Piste (suuri)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:893
 msgctxt "a cursor type"
 msgid "Teardrop North-West (Small)"
-msgstr "Каплевидний північно-західний (Малий)"
+msgstr "Pisara, luode (pieni)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:894
 msgctxt "a cursor type"
 msgid "Teardrop North-West (Medium)"
-msgstr "Каплевидний північно-західний (Середній)"
+msgstr "Pisara, luode (tavallinen)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:895
 msgctxt "a cursor type"
 msgid "Teardrop North-West (Large)"
-msgstr "Каплевидний північно-західний (Великий)"
+msgstr "Pisara, luode (suuri)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:896
 msgctxt "a cursor type"
 msgid "Teardrop North-East (Small)"
-msgstr "Каплевидний північно-східний (Малий)"
+msgstr "Pisara, koillinen (pieni)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:897
 msgctxt "a cursor type"
 msgid "Teardrop North-East (Medium)"
-msgstr "Крапля північно-східна (Середня)"
+msgstr "Pisara, koillinen (tavallinen)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:898
 msgctxt "a cursor type"
 msgid "Teardrop North-East (Large)"
-msgstr "Каплевидний північно-східний (Великий)"
+msgstr "Pisara, koillinen (suuri)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:899
 msgctxt "a cursor type"
 msgid "Teardrop North (Small)"
-msgstr "Каплевидна північ (Мала)"
+msgstr "Pisara, pohjoinen (pieni)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:900
 msgctxt "a cursor type"
 msgid "Teardrop North (Medium)"
-msgstr "Каплевидна північ (Середня)"
+msgstr "Pisara, pohjoinen (tavallinen)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:901
 msgctxt "a cursor type"
 msgid "Teardrop North (Large)"
-msgstr "Каплевидний північний (Великий)"
+msgstr "Pisara, pohjoinen (suuri)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:902
 msgctxt "a cursor type"
 msgid "Beam (Small)"
-msgstr "Промінь (Малий)"
+msgstr "Säde (pieni)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:903
 msgctxt "a cursor type"
 msgid "Beam (Medium)"
-msgstr "Промінь (Середній)"
+msgstr "Säde (tavallinen)"
 
 #: crates/rnote-ui/src/settingspanel/mod.rs:904
 msgctxt "a cursor type"
 msgid "Beam (Large)"
-msgstr "Промінь (Великий)"
+msgstr "Säde (suuri)"
 
 #: crates/rnote-ui/src/workspacebrowser/filerow/actions/duplicate.rs:35
 msgid "Can't duplicate an unsaved document"
-msgstr ""
+msgstr "Tallentamatonta asiakirjaa ei voi monistaa"
 
 #: crates/rnote-ui/src/workspacebrowser/filerow/actions/duplicate.rs:45
-#, fuzzy
-#| msgid "Opening .rnote file failed"
 msgid "Duplicating the file failed"
-msgstr "Не вдалося відкрити файл .rnote"
+msgstr "Tiedoston monistaminen epäonnistui"
 
 #: crates/rnote-ui/src/workspacebrowser/filerow/actions/duplicate.rs:51
-#, fuzzy
-#| msgid "Change the directory"
 msgid "Duplicating the directory failed"
-msgstr "Змінити теку"
+msgstr "Kansion monistaminen epäonnistui"
 
 #: crates/rnote-ui/src/workspacebrowser/filerow/actions/open_in_default_app.rs:18
-#, fuzzy
-#| msgid "Failed to open the file in the file manager"
 msgid "Open the file in the default app failed"
-msgstr "Не вдалося відкрити файл у файловому менеджері"
+msgstr "Tiedoston avaaminen oletussovelluksessa epäonnistui"
 
 #: crates/rnote-ui/src/workspacebrowser/filerow/actions/rename.rs:39
 msgid "Renaming file failed, target file already exists"
 msgstr ""
+"Tiedoston nimeäminen uudelleen epäonnistui. Kohdetiedosto on jo olemassa"
 
 #: crates/rnote-ui/src/workspacebrowser/filerow/actions/rename.rs:46
-#, fuzzy
-#| msgid "Opening file failed"
 msgid "Renaming file failed"
-msgstr "Не вдалося відкрити файл"
+msgstr "Tiedoston nimeäminen uudelleen epäonnistui"
 
 #: crates/rnote-ui/src/workspacebrowser/filerow/actions/trash.rs:20
-#, fuzzy
-#| msgid "Inserting file failed"
 msgid "Trashing file failed"
-msgstr "Не вдалося вставити файл"
+msgstr "Tiedoston siirtäminen roskakoriin epäonnistui"
 
 #: crates/rnote-ui/src/workspacebrowser/workspaceactions/createfolder.rs:67
 msgid "Folder Name"
-msgstr "Назва теки"
+msgstr "Kansion nimi"
 
 #: crates/rnote-ui/src/workspacebrowser/workspaceactions/createfolder.rs:75
 msgid "New Folder"
-msgstr "Нова теки"
+msgstr "Uusi kansio"
 
 #: crates/rnote-ui/src/utils.rs:159
 msgctxt "used in string representation of the current selected color"
 msgid "grey"
-msgstr ""
+msgstr "harmaa"
 
 #: crates/rnote-ui/src/utils.rs:161 crates/rnote-ui/src/utils.rs:196
 msgctxt "part of string representation of a color"
 msgid "rose"
-msgstr ""
+msgstr "roosa"
 
 #: crates/rnote-ui/src/utils.rs:163
-#, fuzzy
-#| msgid "Bread"
 msgctxt "part of string representation of a color"
 msgid "red"
-msgstr "Хліб"
+msgstr "punainen"
 
 #: crates/rnote-ui/src/utils.rs:166
 msgctxt "part of string representation of a color"
 msgid "orange"
-msgstr ""
+msgstr "oranssi"
 
 #: crates/rnote-ui/src/utils.rs:169
 msgctxt "part of string representation of a color"
 msgid "yellow"
-msgstr ""
+msgstr "keltainen"
 
 #: crates/rnote-ui/src/utils.rs:173
 msgctxt "part of string representation of a color"
@@ -2490,57 +2435,57 @@ msgstr ""
 #: crates/rnote-ui/src/utils.rs:176
 msgctxt "part of string representation of a color"
 msgid "green"
-msgstr ""
+msgstr "vihreä"
 
 #: crates/rnote-ui/src/utils.rs:179
 msgctxt "part of string representation of a color"
 msgid "spring-green"
-msgstr ""
+msgstr "keväänvihreä"
 
 #: crates/rnote-ui/src/utils.rs:182
 msgctxt "part of string representation of a color"
 msgid "cyan"
-msgstr ""
+msgstr "syaani"
 
 #: crates/rnote-ui/src/utils.rs:185
 msgctxt "part of string representation of a color"
 msgid "azure"
-msgstr ""
+msgstr "asuurinsininen"
 
 #: crates/rnote-ui/src/utils.rs:188
 msgctxt "part of string representation of a color"
 msgid "blue"
-msgstr ""
+msgstr "sininen"
 
 #: crates/rnote-ui/src/utils.rs:191
 msgctxt "part of string representation of a color"
 msgid "violet"
-msgstr ""
+msgstr "violetti"
 
 #: crates/rnote-ui/src/utils.rs:194
 msgctxt "part of string representation of a color"
 msgid "magenta"
-msgstr ""
+msgstr "magenta"
 
 #: crates/rnote-ui/src/utils.rs:201
 msgctxt "part of string representation of a color"
 msgid "greyish"
-msgstr ""
+msgstr "harmahtava"
 
 #: crates/rnote-ui/src/utils.rs:204
 msgctxt "part of string representation of a color"
 msgid "vivid"
-msgstr ""
+msgstr "eloisa"
 
 #: crates/rnote-ui/src/utils.rs:208
 msgctxt "part of string representation of a color"
 msgid "very-dark"
-msgstr ""
+msgstr "erittäin tumma"
 
 #: crates/rnote-ui/src/utils.rs:210
 msgctxt "part of string representation of a color"
 msgid "dark"
-msgstr ""
+msgstr "tumma"
 
 #: crates/rnote-ui/src/utils.rs:213
 msgctxt "part of string representation of a color"
@@ -2548,536 +2493,36 @@ msgid "mid"
 msgstr ""
 
 #: crates/rnote-ui/src/utils.rs:215
-#, fuzzy
-#| msgid "Height"
 msgctxt "part of string representation of a color"
 msgid "bright"
-msgstr "Висота"
+msgstr "kirkas"
 
 #: crates/rnote-ui/src/utils.rs:219
-#, fuzzy
-#| msgid "translator-credits"
 msgctxt "part of string representation of a color"
 msgid "transparent"
-msgstr ""
-"Володимир Лісівка <vlisivka@gmail.com>, https://linux.org.ua\n"
-"Kefir2105\n"
-"<jonweblin2205@protonmail.com>\n"
-"diminDDL\n"
-"dimin21590@gmail.com\n"
-"volkov <volkovissocool@gmail.com>"
+msgstr "läpinäkyvä"
 
 #: crates/rnote-ui/src/utils.rs:221
-#, fuzzy
-#| msgid "translator-credits"
 msgctxt "part of string representation of a color"
 msgid "translucent"
-msgstr ""
-"Володимир Лісівка <vlisivka@gmail.com>, https://linux.org.ua\n"
-"Kefir2105\n"
-"<jonweblin2205@protonmail.com>\n"
-"diminDDL\n"
-"dimin21590@gmail.com\n"
-"volkov <volkovissocool@gmail.com>"
+msgstr "läpikuultava"
 
 #: crates/rnote-ui/src/utils.rs:225
 msgctxt "part of string representation of a color"
 msgid "slightly-translucent"
-msgstr ""
+msgstr "hieman läpikuultava"
 
 #: crates/rnote-ui/src/utils.rs:234
 msgctxt "part of string representation of a color"
 msgid "fully transparent"
-msgstr ""
+msgstr "täysin läpinäkyvä"
 
 #: crates/rnote-ui/src/utils.rs:237
 msgctxt "part of string representation of a color"
 msgid "black"
-msgstr ""
+msgstr "musta"
 
 #: crates/rnote-ui/src/utils.rs:239
 msgctxt "part of string representation of a color"
 msgid "white"
-msgstr ""
-
-#~ msgid "Opened file was moved or deleted on disk"
-#~ msgstr "Відкритий файл було переміщено або видалено на диску"
-
-#~ msgid "Lecture Note 1"
-#~ msgstr "Конспект лекції 1"
-
-#~ msgid "A Pdf annotation"
-#~ msgstr "Анотація Pdf"
-
-#~ msgid "Lecture Note 2"
-#~ msgstr "Конспект лекції 2"
-
-#~ msgid "Close the Folded Flap"
-#~ msgstr "Закрити складену панель"
-
-#~ msgid "Remove Page"
-#~ msgstr "Видалити сторінку"
-
-#~ msgid "Add Page"
-#~ msgstr "Додати сторінку"
-
-#~ msgid "Resize Document to Fit Strokes"
-#~ msgstr "Змінити розмір відповідно до вмісту"
-
-#~ msgid ""
-#~ "Opening this file overwrites any unsaved changes. Do you want to save the "
-#~ "current document?"
-#~ msgstr ""
-#~ "Відкриття цього файлу перезаписує будь-які незбережені зміни. Зберегти "
-#~ "поточний документ?"
-
-#~ msgid "Opening vector image file failed"
-#~ msgstr "Не вдалося відкрити файл векторного зображення"
-
-#~ msgid "Opening bitmap image file failed"
-#~ msgstr "Не вдалося відкрити файл растрового зображення"
-
-#~ msgid "Opening Xournal++ file failed"
-#~ msgstr "Не вдалося відкрити файл Xournal++"
-
-#~ msgid "Opening Pdf file failed"
-#~ msgstr "Не вдалося відкрити файл Pdf"
-
-#~ msgid "Failed to open file, tried to open folder as file"
-#~ msgstr "Не вдалося відкрити файл, спробуйте відкрити папку як файл"
-
-#~ msgid "- unable to find a valid save folder -"
-#~ msgstr "- неможливо знайти дійсну папку для збереження -"
-
-#~ msgid "Document Background"
-#~ msgstr "Фон документа"
-
-#~ msgid ""
-#~ "Font Chooser\n"
-#~ "(double-click, click on select\n"
-#~ "or press Enter to select a new font)"
-#~ msgstr ""
-#~ "Вибір шрифту\n"
-#~ "(двічі клацніть, натисніть на Вибрати\n"
-#~ "або натисніть Enter, щоб вибрати новий шрифт)"
-
-#~ msgid "Main window in light colors"
-#~ msgstr "Головне вікно в світлих тонах"
-
-#~ msgid "Printed document successfully"
-#~ msgstr "Документ успішно надруковано"
-
-#~ msgid "perm."
-#~ msgstr "дозв."
-
-#~ msgid "Offset the Camera"
-#~ msgstr "Зміщення камери"
-
-#, fuzzy
-#~| msgctxt "shortcut window"
-#~| msgid "Drag View"
-#~ msgid "Drag View"
-#~ msgstr "Перетягнути перегляд"
-
-#~ msgctxt "shortcut window"
-#~ msgid "General"
-#~ msgstr "Загальні"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Toggle Fullscreen"
-#~ msgstr "Повноекранний режим"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Zoom in"
-#~ msgstr "Збільшити"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Zoom out"
-#~ msgstr "Зменшити масштаб"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Document"
-#~ msgstr "Документ"
-
-#~ msgctxt "shortcut window"
-#~ msgid "New Document"
-#~ msgstr "Новий документ"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Save Document"
-#~ msgstr "Зберегти документ"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Save Document As"
-#~ msgstr "Зберегти документ як"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Clear Document"
-#~ msgstr "Очистити документ"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Import File"
-#~ msgstr "Імпортувати файл"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Duplicate Selection"
-#~ msgstr "Дублікат виділення"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Undo"
-#~ msgstr "Скасувати"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Redo"
-#~ msgstr "Повторити"
-
-#~ msgid "Main window in dark colors"
-#~ msgstr "Головне вікно темних кольорів"
-
-#~ msgid "Export document"
-#~ msgstr "Експортувати документ"
-
-#~ msgid "Export selection"
-#~ msgstr "Експортувати вибране"
-
-#~ msgid "Save _as"
-#~ msgstr "Зберегти _як"
-
-#~ msgid "Export _document"
-#~ msgstr "Експортувати _документ"
-
-#~ msgid "Export _selection"
-#~ msgstr "Експортувати _вибране"
-
-#~ msgid "New document"
-#~ msgstr "Новий документ"
-
-#, fuzzy
-#~| msgctxt "shortcut window"
-#~| msgid "Close the active window"
-#~ msgid "Close all _other tabs"
-#~ msgstr "Закрити активне вікно"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Toggle fullscreen"
-#~ msgstr "Перемкнути повноекранний режим"
-
-#~ msgctxt "shortcut window"
-#~ msgid "New document"
-#~ msgstr "Новий документ"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Save document"
-#~ msgstr "Зберегти документ"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Clear document"
-#~ msgstr "Очистити документ"
-
-#, fuzzy
-#~| msgid "Duplicate selection"
-#~ msgctxt "shortcut window"
-#~ msgid "Duplicate selection"
-#~ msgstr "Дублікат виділення"
-
-#~ msgid "JSON"
-#~ msgstr "JSON"
-
-#~ msgid "Open file"
-#~ msgstr "Відкрити файл"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Close the active window"
-#~ msgstr "Закрити активне вікно"
-
-#, fuzzy
-#~| msgctxt "shortcut window"
-#~| msgid "Close the active window"
-#~ msgid "Close the application window"
-#~ msgstr "Закрити активне вікно"
-
-#, fuzzy
-#~| msgid "Change workspace directory"
-#~ msgid ""
-#~ "Change workspace\n"
-#~ "                              directory"
-#~ msgstr "Змінити каталог робочої області"
-
-#~ msgid "Quit Application"
-#~ msgstr "Вийти з застосунку"
-
-#~ msgid ""
-#~ "Any unsaved changes will be lost. Do you want to save the current "
-#~ "document?"
-#~ msgstr "Усі незбережені зміни буде втрачено. Зберегти поточний документ?"
-
-#, fuzzy
-#~| msgctxt "shortcut window"
-#~| msgid "Copy into clipboard"
-#~ msgid "_Copy to clipboard"
-#~ msgstr "Копіювати в буфер обміну"
-
-#, fuzzy
-#~| msgctxt "shortcut window"
-#~| msgid "Copy into clipboard"
-#~ msgid "C_ut to clipboard"
-#~ msgstr "Копіювати в буфер обміну"
-
-#, fuzzy
-#~ msgid "_Paste clipboard"
-#~ msgstr "Вставити буфер обміну як виділення"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Copy into clipboard"
-#~ msgstr "Копіювати в буфер обміну"
-
-#~ msgid "_Clear document"
-#~ msgstr "_Очистити документ"
-
-#~ msgid "Roughness"
-#~ msgstr "Грубість"
-
-#~ msgid ""
-#~ "Indicating how rough the drawing is. 0.0 is a smooth line. Defaults to 1.0"
-#~ msgstr ""
-#~ "Вказує, наскільки грубим є малюнок. 0,0 — плавна лінія. За замовчуванням "
-#~ "1,0"
-
-#~ msgid "Bowing"
-#~ msgstr "Поклон"
-
-#~ msgid ""
-#~ "How curvy the lines are when drawing a rough shape. 0.0 is a straight "
-#~ "line. Defaults to 1.0"
-#~ msgstr ""
-#~ "Наскільки криволінійними є лінії при малюванні грубої форми. 0,0 - це "
-#~ "пряма лінія.За замовчуванням 1.0"
-
-#~ msgid "Curve step count"
-#~ msgstr "Кількість кроків кривої"
-
-#, fuzzy
-#~ msgid "How many steps make up a curve. Defaults to 12"
-#~ msgstr "Скільки кроків складає криву. За замовчуванням 9"
-
-#~ msgid "Multistroke"
-#~ msgstr "Багатоштрих"
-
-#~ msgid "Multiple stroke generation for a sketched look. Defaults to true"
-#~ msgstr "Генерація кількох штрихів для ескізного вигляду. Типово: true"
-
-#, fuzzy
-#~ msgid "Selecting apiece"
-#~ msgstr "Вибір за допомогою прямокутника"
-
-#, fuzzy
-#~ msgid "Xopp, PNG, SVG, JPG, PDF"
-#~ msgstr "файл PNG / SVG / JPG / PDF"
-
-#~ msgid "Drag stroke elements based on proximity"
-#~ msgstr "Перетягніть елементи обведення на основі близькості"
-
-#, fuzzy
-#~ msgid "New Directory name"
-#~ msgstr "Вектор"
-
-#, fuzzy
-#~ msgid "Paste from Clipboard"
-#~ msgstr "Вставити буфер обміну як виділення"
-
-#~ msgid "New"
-#~ msgstr "Новий"
-
-#, fuzzy
-#~ msgid ".rnote file"
-#~ msgstr "Файл .rnote"
-
-#, fuzzy
-#~ msgid ".rnote / .xopp File"
-#~ msgstr "Файл .rnote"
-
-#, fuzzy
-#~| msgid "Import file"
-#~ msgid "Select export file"
-#~ msgstr "Імпортувати файл"
-
-#~ msgid "Export selection as SVG"
-#~ msgstr "Експортувати вибране як SVG"
-
-#~ msgid "Export selection as PNG"
-#~ msgstr "Експортувати вибране як PNG"
-
-#~ msgid "Export document as PDF"
-#~ msgstr "Експортувати документ як PDF"
-
-#~ msgid "Export document as Xournal++ .xopp"
-#~ msgstr "Експортувати документ як Xournal++ .xopp"
-
-#~ msgid "SVG file"
-#~ msgstr "файл SVG"
-
-#, fuzzy
-#~ msgid "PNG file"
-#~ msgstr "файл SVG"
-
-#, fuzzy
-#~ msgid "Export selection as PNG failed."
-#~ msgstr "Експортувати вибране як SVG"
-
-#, fuzzy
-#~ msgid "Exported selection as PNG successfully."
-#~ msgstr "Експортувати вибране як SVG"
-
-#, fuzzy
-#~ msgid "PDF file"
-#~ msgstr "файл SVG"
-
-#, fuzzy
-#~ msgid "Save current document as"
-#~ msgstr "Зберегти поточний аркуш як"
-
-#~ msgid "Quit"
-#~ msgstr "Вийти"
-
-#~ msgid "Name"
-#~ msgstr "Назва"
-
-#, fuzzy
-#~ msgid "Change the workspace name"
-#~ msgstr "Змінити каталог робочої області"
-
-#~ msgid "An easy and simple vector-based note taking app"
-#~ msgstr "Проста та проста векторна програма для нотаток"
-
-#~ msgid "Multiple pages"
-#~ msgstr "Кілька сторінок"
-
-#~ msgid "Developer settings"
-#~ msgstr "Налаштування розробника"
-
-#~ msgid "Renderer backend"
-#~ msgstr "Двигун рендерера"
-
-#~ msgid "Endless sheet"
-#~ msgstr "Нескінченний аркуш"
-
-#~ msgid "Clear sheet"
-#~ msgstr "Очистити аркуш"
-
-#~ msgid "Export .."
-#~ msgstr "Експортувати .."
-
-#~ msgid "Step back one element in stroke"
-#~ msgstr "Крок назад на один елемент у обведенні"
-
-#~ msgid "Step forward one element in stroke"
-#~ msgstr "Крок вперед на один елемент у обведенні"
-
-#~ msgid "Clear Sheet"
-#~ msgstr "Очистити аркуш"
-
-#~ msgid "Undo last stroke"
-#~ msgstr "Скасувати останній штрих"
-
-#~ msgid "Redo last stroke"
-#~ msgstr "Повторити останній штрих"
-
-#~ msgid "Sheet margin"
-#~ msgstr "Поле аркуша"
-
-#~ msgid "Sheet Format"
-#~ msgstr "Формат аркуша"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Sheet"
-#~ msgstr "Аркуш"
-
-#~ msgctxt "shortcut window"
-#~ msgid "New sheet"
-#~ msgstr "Новий аркуш"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Open sheet"
-#~ msgstr "Відкрити аркуш"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Save sheet"
-#~ msgstr "Зберегти аркуш"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Save sheet as"
-#~ msgstr "Зберегти аркуш як"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Clear sheet"
-#~ msgstr "Очистити аркуш"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Print sheet"
-#~ msgstr "Друк аркуша"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Delete current selection"
-#~ msgstr "Видалити поточне виділення"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Duplicate current selection"
-#~ msgstr "Зробити дублікат поточного виділення"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Enable temporary Eraser"
-#~ msgstr "Увімкнути тимчасову гумку"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Undo last stroke"
-#~ msgstr "Скасувати останній штрих"
-
-#~ msgctxt "shortcut window"
-#~ msgid "Redo last stroke"
-#~ msgstr "Повторити останній штрих"
-
-#~ msgid "Experimental"
-#~ msgstr "Експериментальний"
-
-#~ msgid "Brush styles configuration"
-#~ msgstr "Конфігурація стилів пензля"
-
-#~ msgid "Dot Radii"
-#~ msgstr "Радіуси точки"
-
-#~ msgid "The radii of the dots"
-#~ msgstr "Радіуси точок"
-
-#~ msgid "Distribution"
-#~ msgstr "Розповсюдження"
-
-#~ msgid "Reset brush width"
-#~ msgstr "Скинути ширину пензля"
-
-#~ msgid "Reset eraser width"
-#~ msgstr "Скинути ширину гумки"
-
-#~ msgid "Reset marker width"
-#~ msgstr "Скинути ширину маркера"
-
-#~ msgid "Rough shapes"
-#~ msgstr "Грубі форми"
-
-#~ msgid "Reset shape stroke width"
-#~ msgstr "Скинути ширину обведення фігури"
-
-#~ msgid "Expand the sheet vertically"
-#~ msgstr "Розгорнути аркуш по вертикалі"
-
-#~ msgid "Save Sheet As"
-#~ msgstr "Зберегти аркуш як"
-
-#~ msgid "SVG File"
-#~ msgstr "файл SVG"
-
-#, fuzzy
-#~ msgid ""
-#~ "Creating a new document will erase any unsaved changes. Do you want to "
-#~ "save the current document?"
-#~ msgstr ""
-#~ "Створення нового документа стирає всі незбережені зміни. Ви впевнені?"
+msgstr "valkoinen"

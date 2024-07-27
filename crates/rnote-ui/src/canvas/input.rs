@@ -8,6 +8,7 @@ use rnote_engine::ext::GraphenePointExt;
 use rnote_engine::pens::penholder::BacklogPolicy;
 use rnote_engine::pens::PenMode;
 use rnote_engine::WidgetFlags;
+use std::collections::HashSet;
 use std::time::{Duration, Instant};
 
 // Returns whether the event should be inhibited from propagating, and the new pen state
@@ -40,24 +41,15 @@ pub(crate) fn handle_pointer_controller_event(
             tracing::trace!(
                 "canvas event MotionNotify - gdk_modifiers: {gdk_modifiers:?}, is_stylus: {is_stylus}"
             );
+            handle_pen_event = true;
 
             if is_stylus {
-                handle_pen_event = true;
-
                 // like in gtk4 'gesturestylus.c:120' stylus proximity is detected this way,
                 // in case ProximityIn & ProximityOut is not reported.
                 if gdk_modifiers.contains(gdk::ModifierType::BUTTON1_MASK) {
                     pen_state = PenState::Down;
                 } else {
                     pen_state = PenState::Proximity;
-                }
-            } else {
-                // only handle no pressed button, primary and secondary mouse buttons.
-                if gdk_modifiers.is_empty()
-                    || gdk_modifiers.contains(gdk::ModifierType::BUTTON1_MASK)
-                    || gdk_modifiers.contains(gdk::ModifierType::BUTTON3_MASK)
-                {
-                    handle_pen_event = true;
                 }
             }
         }
@@ -119,7 +111,16 @@ pub(crate) fn handle_pointer_controller_event(
                 if gdk_button == gdk::BUTTON_PRIMARY {
                     pen_state = PenState::Up;
                 } else {
-                    pen_state = PenState::Proximity;
+                    // Workaround for https://github.com/flxzt/rnote/issues/785
+                    // On window only one button release event is sent when the
+                    // pen leaves the screen, and if the button is pressed this
+                    // is not a gdk::BUTTON_PRIMARY
+                    #[allow(clippy::collapsible_else_if)]
+                    if cfg!(target_os = "windows") {
+                        pen_state = PenState::Up;
+                    } else {
+                        pen_state = PenState::Proximity;
+                    }
                 }
             } else {
                 #[allow(clippy::collapsible_else_if)]
@@ -167,6 +168,18 @@ pub(crate) fn handle_pointer_controller_event(
 
         for (element, event_time) in elements {
             tracing::trace!("handle pen event element - element: {element:?}, pen_state: {pen_state:?}, event_time_delta: {:?}, modifier_keys: {modifier_keys:?}, pen_mode: {pen_mode:?}", now.duration_since(event_time));
+
+            // Workaround for https://github.com/flxzt/rnote/issues/785
+            // only one event is sent when the pen approaches the screen
+            // on Windows whereas rnote expects 2 (switch to proximity
+            // then down). This forces the pen to be down when on the
+            // screen
+            #[cfg(target_os = "windows")]
+            {
+                if element.pressure > 0.0 && is_stylus {
+                    pen_state = PenState::Down;
+                }
+            }
 
             match pen_state {
                 PenState::Up => {
@@ -423,18 +436,19 @@ pub(crate) fn retrieve_button_shortcut_key(
     }
 }
 
-pub(crate) fn retrieve_modifier_keys(modifier: gdk::ModifierType) -> Vec<ModifierKey> {
-    let mut keys = vec![];
+pub(crate) fn retrieve_modifier_keys(modifier: gdk::ModifierType) -> HashSet<ModifierKey> {
+    let mut keys = HashSet::new();
 
     if modifier.contains(gdk::ModifierType::SHIFT_MASK) {
-        keys.push(ModifierKey::KeyboardShift);
+        keys.insert(ModifierKey::KeyboardShift);
     }
     if modifier.contains(gdk::ModifierType::CONTROL_MASK) {
-        keys.push(ModifierKey::KeyboardCtrl);
+        keys.insert(ModifierKey::KeyboardCtrl);
     }
     if modifier.contains(gdk::ModifierType::ALT_MASK) {
-        keys.push(ModifierKey::KeyboardAlt);
+        keys.insert(ModifierKey::KeyboardAlt);
     }
+
     keys
 }
 

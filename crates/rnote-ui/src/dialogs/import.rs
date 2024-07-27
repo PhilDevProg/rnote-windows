@@ -1,14 +1,14 @@
-// gtk4::Dialog is deprecated, but the replacement adw::ToolbarView is not suitable for a async flow
-#![allow(deprecated)]
+//adw::ToolbarView is a replacement for adw::Dialog but not suitable for an async flow
 
 // Imports
 use crate::canvas::RnCanvas;
 use crate::{config, RnAppWindow};
 use adw::prelude::*;
+use futures::StreamExt;
 use gettextrs::gettext;
 use gtk4::{
-    gio, glib, glib::clone, Builder, Dialog, FileDialog, FileFilter, Label, ResponseType,
-    ToggleButton,
+    gio, glib, glib::clone, Builder, Button, CallbackAction, FileDialog, FileFilter, Label,
+    Shortcut, ShortcutController, ShortcutTrigger, ToggleButton,
 };
 use num_traits::ToPrimitive;
 use rnote_engine::engine::import::{PdfImportPageSpacing, PdfImportPagesType};
@@ -16,7 +16,14 @@ use rnote_engine::engine::import::{PdfImportPageSpacing, PdfImportPagesType};
 /// Opens a new rnote save file in a new tab
 pub(crate) async fn filedialog_open_doc(appwindow: &RnAppWindow) {
     let filter = FileFilter::new();
-    filter.add_mime_type("application/rnote");
+    // note : mimetypes are not supported with the native file picker on windows
+    // See the limitations on FileChooserNative
+    // https://gtk-rs.org/gtk3-rs/stable/latest/docs/gtk/struct.FileChooserNative.html#win32-details--gtkfilechooserdialognative-win32
+    if cfg!(target_os = "windows") {
+        filter.add_pattern("*.rnote");
+    } else {
+        filter.add_mime_type("application/rnote");
+    }
     filter.add_suffix("rnote");
     filter.set_name(Some(&gettext(".rnote")));
 
@@ -51,12 +58,24 @@ pub(crate) async fn filedialog_open_doc(appwindow: &RnAppWindow) {
 
 pub(crate) async fn filedialog_import_file(appwindow: &RnAppWindow) {
     let filter = FileFilter::new();
-    filter.add_mime_type("application/x-xopp");
-    filter.add_mime_type("application/pdf");
-    filter.add_mime_type("image/svg+xml");
-    filter.add_mime_type("image/png");
-    filter.add_mime_type("image/jpeg");
-    filter.add_mime_type("text/plain");
+    // note : mimetypes are not supported with the native file picker on windows
+    // See the limitations on FileChooserNative
+    // https://gtk-rs.org/gtk3-rs/stable/latest/docs/gtk/struct.FileChooserNative.html#win32-details--gtkfilechooserdialognative-win32
+    if cfg!(target_os = "windows") {
+        filter.add_pattern("*.xopp");
+        filter.add_pattern("*.pdf");
+        filter.add_pattern("*.svg");
+        filter.add_pattern("*.png");
+        filter.add_pattern("*.jpeg");
+        filter.add_pattern("*.txt");
+    } else {
+        filter.add_mime_type("application/x-xopp");
+        filter.add_mime_type("application/pdf");
+        filter.add_mime_type("image/svg+xml");
+        filter.add_mime_type("image/png");
+        filter.add_mime_type("image/jpeg");
+        filter.add_mime_type("text/plain");
+    }
     filter.add_suffix("xopp");
     filter.add_suffix("pdf");
     filter.add_suffix("svg");
@@ -105,7 +124,7 @@ pub(crate) async fn dialog_import_pdf_w_prefs(
     let builder = Builder::from_resource(
         (String::from(config::APP_IDPATH) + "ui/dialogs/import.ui").as_str(),
     );
-    let dialog: Dialog = builder.object("dialog_import_pdf_w_prefs").unwrap();
+    let dialog: adw::Dialog = builder.object("dialog_import_pdf_w_prefs").unwrap();
     let pdf_page_start_row: adw::SpinRow = builder.object("pdf_page_start_row").unwrap();
     let pdf_page_end_row: adw::SpinRow = builder.object("pdf_page_end_row").unwrap();
     let pdf_info_label: Label = builder.object("pdf_info_label").unwrap();
@@ -122,6 +141,8 @@ pub(crate) async fn dialog_import_pdf_w_prefs(
         builder.object("pdf_import_page_borders_row").unwrap();
     let pdf_import_adjust_document_row: adw::SwitchRow =
         builder.object("pdf_import_adjust_document_row").unwrap();
+    let import_pdf_button_cancel: Button = builder.object("import_pdf_button_cancel").unwrap();
+    let import_pdf_button_confirm: Button = builder.object("import_pdf_button_confirm").unwrap();
 
     //set the unit to pixel for the clamp
     let clamp: adw::Clamp = builder.object("clamp").unwrap();
@@ -274,22 +295,73 @@ pub(crate) async fn dialog_import_pdf_w_prefs(
         pdf_page_end_row.set_value(n_pages.into());
     }
 
-    let response = dialog.run_future().await;
-    dialog.close();
-    match response {
-        ResponseType::Apply => {
+    // Listen to responses
+
+    let (tx, mut rx) = futures::channel::mpsc::unbounded::<anyhow::Result<bool>>();
+    let tx_cancel = tx.clone();
+    let tx_confirm = tx.clone();
+
+    import_pdf_button_cancel.connect_clicked(clone!(@weak dialog => move |_| {
+        dialog.close();
+
+        if let Err(e) = tx_cancel.unbounded_send(Ok(false)) {
+            tracing::error!(
+                "PDF import dialog closed, but failed to send signal through channel. Err: {e:?}"
+            );
+        }
+    }));
+
+    import_pdf_button_confirm.connect_clicked(clone!(@weak pdf_page_start_row, @weak pdf_page_end_row, @weak input_file, @weak dialog, @weak canvas => move |_| {
+        dialog.close();
+
+        let inner_tx_confirm = tx_confirm.clone();
+
+        glib::spawn_future_local(clone!(@weak pdf_page_start_row, @weak pdf_page_end_row, @weak input_file, @weak canvas => async move {
             let page_range =
                 (pdf_page_start_row.value() as u32 - 1)..pdf_page_end_row.value() as u32;
-            let (bytes, _) = input_file.load_bytes_future().await?;
-            canvas
-                .load_in_pdf_bytes(bytes.to_vec(), target_pos, Some(page_range))
-                .await?;
-            Ok(true)
-        }
-        _ => {
-            // Cancel
-            Ok(false)
-        }
+
+            let (bytes, _) = match input_file.load_bytes_future().await {
+                Ok(res) => {res}
+                Err(err) => {
+                    if let Err(e) = inner_tx_confirm.unbounded_send(Err(err.into())) {
+                        tracing::error!("Failed to load file, but failed to send signal through channel. Err: {e:?}");
+                    }
+                    return;
+                }
+            };
+            if let Err(e) = canvas.load_in_pdf_bytes(bytes.to_vec(), target_pos, Some(page_range)).await {
+                if let Err(e) = inner_tx_confirm.unbounded_send(Err(e)) {
+                    tracing::error!("Failed to load PDF, but failed to send signal through channel. Err: {e:?}");
+                }
+                return;
+            }
+
+            if let Err(e) = inner_tx_confirm.unbounded_send(Ok(true)) {
+                tracing::error!("PDF file imported, but failed to send signal through channel. Err: {e:?}");
+            }
+        }));
+    }));
+
+    // Overwrite builtin close shortcut
+    let controller = ShortcutController::new();
+    controller.add_shortcut(Shortcut::new(
+        Some(ShortcutTrigger:: parse_string("Escape").unwrap()),
+        Some(CallbackAction::new(clone!(@weak import_pdf_button_cancel => @default-return glib::Propagation::Stop, move |_, _| {
+            import_pdf_button_cancel.emit_clicked();
+
+            glib::Propagation::Stop
+        }))),
+    ));
+    dialog.add_controller(controller);
+
+    // Present than wait for a response from the dialog
+    dialog.present(appwindow);
+
+    match rx.next().await {
+        Some(res) => res,
+        None => Err(anyhow::anyhow!(
+            "Channel closed before receiving a response from dialog."
+        )),
     }
 }
 
@@ -304,11 +376,11 @@ pub(crate) async fn dialog_import_xopp_w_prefs(
     let builder = Builder::from_resource(
         (String::from(config::APP_IDPATH) + "ui/dialogs/import.ui").as_str(),
     );
-    let dialog: Dialog = builder.object("dialog_import_xopp_w_prefs").unwrap();
+    let dialog: adw::Dialog = builder.object("dialog_import_xopp_w_prefs").unwrap();
     let dpi_row: adw::SpinRow = builder.object("xopp_import_dpi_row").unwrap();
     let xopp_import_prefs = canvas.engine_ref().import_prefs.xopp_import_prefs;
-
-    dialog.set_transient_for(Some(appwindow));
+    let import_xopp_button_cancel: Button = builder.object("import_xopp_button_cancel").unwrap();
+    let import_xopp_button_confirm: Button = builder.object("import_xopp_button_confirm").unwrap();
 
     // Set initial widget state for preference
     dpi_row.set_value(xopp_import_prefs.dpi);
@@ -318,17 +390,69 @@ pub(crate) async fn dialog_import_xopp_w_prefs(
         canvas.engine_mut().import_prefs.xopp_import_prefs.dpi = row.value();
     }));
 
-    let response = dialog.run_future().await;
-    dialog.close();
-    match response {
-        ResponseType::Apply => {
-            let (bytes, _) = input_file.load_bytes_future().await?;
-            canvas.load_in_xopp_bytes(bytes.to_vec()).await?;
-            Ok(true)
+    // Listen to responses
+
+    let (tx, mut rx) = futures::channel::mpsc::unbounded::<anyhow::Result<bool>>();
+    let tx_cancel = tx.clone();
+    let tx_confirm = tx.clone();
+
+    import_xopp_button_cancel.connect_clicked(clone!(@weak dialog => move |_| {
+        dialog.close();
+
+        if let Err(e) = tx_cancel.unbounded_send(Ok(false)) {
+            tracing::error!(
+                "XOPP import dialog closed, but failed to send signal through channel. Err: {e:?}"
+            );
         }
-        _ => {
-            // Cancel
-            Ok(false)
-        }
+    }));
+
+    import_xopp_button_confirm.connect_clicked(clone!(@weak input_file, @weak dialog, @weak canvas => move |_| {
+        dialog.close();
+
+        let inner_tx_confirm = tx_confirm.clone();
+
+        glib::spawn_future_local(clone!(@weak input_file, @weak canvas => async move {
+            let (bytes, _) = match input_file.load_bytes_future().await {
+                Ok(res) => {res}
+                Err(err) => {
+                    if let Err(e) = inner_tx_confirm.unbounded_send(Err(err.into())) {
+                        tracing::error!("Failed to load file, but failed to send signal through channel. Err: {e:?}");
+                    }
+                    return;
+                }
+            };
+            if let Err(e) = canvas.load_in_xopp_bytes(bytes.to_vec()).await {
+                if let Err(e) = inner_tx_confirm.unbounded_send(Err(e)) {
+                    tracing::error!("Failed to load XOPP, but failed to send signal through channel. Err: {e:?}");
+                }
+                return;
+            };
+
+            if let Err(e) = inner_tx_confirm.unbounded_send(Ok(true)) {
+                tracing::error!("XOPP file imported, but failed to send signal through channel. Err: {e:?}");
+            }
+        }));
+    }));
+
+    // Overwrite builtin close shortcut
+    let controller = ShortcutController::new();
+    controller.add_shortcut(Shortcut::new(
+        Some(ShortcutTrigger::parse_string("Escape").unwrap()),
+        Some(CallbackAction::new(clone!(@weak import_xopp_button_cancel => @default-return glib::Propagation::Stop, move |_, _| {
+            import_xopp_button_cancel.emit_clicked();
+
+            glib::Propagation::Stop
+        }))),
+    ));
+    dialog.add_controller(controller);
+
+    // Present than wait for a response from the dialog
+    dialog.present(appwindow);
+
+    match rx.next().await {
+        Some(res) => res,
+        None => Err(anyhow::anyhow!(
+            "Channel closed before receiving a response from dialog."
+        )),
     }
 }
