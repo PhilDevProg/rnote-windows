@@ -152,8 +152,6 @@ pub(crate) async fn dialog_import_pdf_w_prefs(
         tracing::debug!("setting unit to px, the gdk scale toggle is activated");
     }
 
-    dialog.set_transient_for(Some(appwindow));
-
     pdf_import_adjust_document_row
         .bind_property("active", &pdf_import_width_row, "sensitive")
         .invert_boolean()
