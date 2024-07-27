@@ -144,14 +144,6 @@ pub(crate) async fn dialog_import_pdf_w_prefs(
     let import_pdf_button_cancel: Button = builder.object("import_pdf_button_cancel").unwrap();
     let import_pdf_button_confirm: Button = builder.object("import_pdf_button_confirm").unwrap();
 
-    //set the unit to pixel for the clamp
-    let clamp: adw::Clamp = builder.object("clamp").unwrap();
-
-    if appwindow.gtk_scale() {
-        clamp.set_unit(adw::LengthUnit::Px);
-        tracing::debug!("setting unit to px, the gdk scale toggle is activated");
-    }
-
     pdf_import_adjust_document_row
         .bind_property("active", &pdf_import_width_row, "sensitive")
         .invert_boolean()
