@@ -440,15 +440,6 @@ pub(crate) async fn dialog_edit_selected_workspace(appwindow: &RnAppWindow) {
     let icon_picker: RnIconPicker = builder
         .object("edit_selected_workspace_icon_picker")
         .unwrap();
-
-    let clamp: adw::Clamp = builder
-        .object("dialog_edit_selected_workspace_clamp")
-        .unwrap();
-
-    if appwindow.gtk_scale() {
-        clamp.set_unit(adw::LengthUnit::Px);
-    }
-
     let edit_selected_workspace_button_cancel: Button = builder
         .object("edit_selected_workspace_button_cancel")
         .unwrap();
